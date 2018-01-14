@@ -1,0 +1,971 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B1202932003802400E1AA79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1202922003802400E1AA79 /* AppDelegate.m */; };
+		0B1202992003802400E1AA79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B1202972003802400E1AA79 /* Main.storyboard */; };
+		0B12029C2003802400E1AA79 /* TechProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B12029A2003802400E1AA79 /* TechProject.xcdatamodeld */; };
+		0B12029E2003802400E1AA79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B12029D2003802400E1AA79 /* Assets.xcassets */; };
+		0B1202A12003802400E1AA79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B12029F2003802400E1AA79 /* LaunchScreen.storyboard */; };
+		0B1202A42003802400E1AA79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1202A32003802400E1AA79 /* main.m */; };
+		0B1202D320038EB900E1AA79 /* libiconv.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1202D220038EB900E1AA79 /* libiconv.2.tbd */; };
+		0B1202D520038EC300E1AA79 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1202D420038EC300E1AA79 /* libiconv.tbd */; };
+		0B12035B2004680E00E1AA79 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B12035A2004680D00E1AA79 /* WebKit.framework */; };
+		0BA5C2202004E66900DE6F82 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BA5C21E2004E66900DE6F82 /* loading.json */; };
+		0BA5C2402004F2FE00DE6F82 /* empty_status.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BA5C23E2004F2FE00DE6F82 /* empty_status.json */; };
+		0BA5C2412004F2FE00DE6F82 /* emoji_wink.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BA5C23F2004F2FE00DE6F82 /* emoji_wink.json */; };
+		0BA5C2DA2006080800DE6F82 /* TPRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2692006080800DE6F82 /* TPRefreshHeaderView.m */; };
+		0BA5C2DB2006080800DE6F82 /* TPCollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C26D2006080800DE6F82 /* TPCollectionFlowLayout.m */; };
+		0BA5C2DC2006080800DE6F82 /* TPTopLeftLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2702006080800DE6F82 /* TPTopLeftLabel.m */; };
+		0BA5C2DD2006080800DE6F82 /* TPProjectDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2732006080800DE6F82 /* TPProjectDataManager.m */; };
+		0BA5C2DE2006080800DE6F82 /* TPExcelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2742006080800DE6F82 /* TPExcelManager.m */; };
+		0BA5C2DF2006080800DE6F82 /* TPProjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2772006080800DE6F82 /* TPProjectModel.m */; };
+		0BA5C2E02006080800DE6F82 /* TPCommonViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C27B2006080800DE6F82 /* TPCommonViewHelper.m */; };
+		0BA5C2E12006080800DE6F82 /* TPHomeVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C27F2006080800DE6F82 /* TPHomeVCL.m */; };
+		0BA5C2E22006080800DE6F82 /* TPProjectListVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2802006080800DE6F82 /* TPProjectListVCL.m */; };
+		0BA5C2E32006080800DE6F82 /* TPProjectListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2852006080800DE6F82 /* TPProjectListModel.m */; };
+		0BA5C2E42006080800DE6F82 /* TPHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2862006080800DE6F82 /* TPHomeModel.m */; };
+		0BA5C2E52006080800DE6F82 /* TPProjectListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2892006080800DE6F82 /* TPProjectListCell.m */; };
+		0BA5C2E62006080800DE6F82 /* TPHomeRegionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C28A2006080800DE6F82 /* TPHomeRegionCell.m */; };
+		0BA5C2E72006080800DE6F82 /* TPLaunchVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C28F2006080800DE6F82 /* TPLaunchVCL.m */; };
+		0BA5C2E82006080800DE6F82 /* TPNoticeVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2922006080800DE6F82 /* TPNoticeVCL.m */; };
+		0BA5C2E92006080800DE6F82 /* TPNoticeDetailVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2962006080800DE6F82 /* TPNoticeDetailVCL.m */; };
+		0BA5C2EA2006080800DE6F82 /* TPNoticeListVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2972006080800DE6F82 /* TPNoticeListVCL.m */; };
+		0BA5C2EB2006080800DE6F82 /* TPNoticeListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2992006080800DE6F82 /* TPNoticeListItem.m */; };
+		0BA5C2EC2006080800DE6F82 /* TPNoticeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C29C2006080800DE6F82 /* TPNoticeListModel.m */; };
+		0BA5C2ED2006080800DE6F82 /* TPNoticeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C29D2006080800DE6F82 /* TPNoticeModel.m */; };
+		0BA5C2EE2006080800DE6F82 /* TPNoticeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C29E2006080800DE6F82 /* TPNoticeService.m */; };
+		0BA5C2EF2006080800DE6F82 /* TPNoticeCategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2A22006080800DE6F82 /* TPNoticeCategoryItem.m */; };
+		0BA5C2F02006080800DE6F82 /* TPNoticeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2A42006080800DE6F82 /* TPNoticeListCell.m */; };
+		0BA5C2F12006080800DE6F82 /* TPNoticeCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2A72006080800DE6F82 /* TPNoticeCategoryCell.m */; };
+		0BA5C2F22006080800DE6F82 /* TPTabBarVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2AA2006080800DE6F82 /* TPTabBarVCL.m */; };
+		0BA5C2F32006080800DE6F82 /* TPTabBarAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2AB2006080800DE6F82 /* TPTabBarAnimator.m */; };
+		0BA5C2F42006080800DE6F82 /* TPClientVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2B12006080800DE6F82 /* TPClientVCL.m */; };
+		0BA5C2F52006080800DE6F82 /* TPClientModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2B42006080800DE6F82 /* TPClientModel.m */; };
+		0BA5C2F62006080800DE6F82 /* UIScrollView+TPRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2B82006080800DE6F82 /* UIScrollView+TPRefresh.m */; };
+		0BA5C2F72006080800DE6F82 /* main11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2BC2006080800DE6F82 /* main11.cpp */; };
+		0BA5C2F82006080800DE6F82 /* XlsReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2BE2006080800DE6F82 /* XlsReader.cpp */; };
+		0BA5C2F92006080800DE6F82 /* DHxlsReaderIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2C92006080800DE6F82 /* DHxlsReaderIOS.m */; };
+		0BA5C2FA2006080800DE6F82 /* DHcell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2CD2006080800DE6F82 /* DHcell.m */; };
+		0BA5C2FB2006080800DE6F82 /* xls.c in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2D02006080800DE6F82 /* xls.c */; };
+		0BA5C2FC2006080800DE6F82 /* xlstool.c in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2D12006080800DE6F82 /* xlstool.c */; };
+		0BA5C2FD2006080800DE6F82 /* ole.c in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2D22006080800DE6F82 /* ole.c */; };
+		0BA5C2FE2006080800DE6F82 /* xls2csv.c in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2D32006080800DE6F82 /* xls2csv.c */; };
+		0BA5C2FF2006080800DE6F82 /* getopt.c in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2D42006080800DE6F82 /* getopt.c */; };
+		0BA5C3002006080800DE6F82 /* TPBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2D62006080800DE6F82 /* TPBaseModel.m */; };
+		0BA5C3012006080800DE6F82 /* TPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2D92006080800DE6F82 /* TPBaseViewController.m */; };
+		0BFD23AC2004C88D00F9AFC0 /* test.xls in Resources */ = {isa = PBXBuildFile; fileRef = 0BFD23AA2004C88D00F9AFC0 /* test.xls */; };
+		FC5E6A59ED7FD0855B2F900B /* libPods-TechProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E84D5D3A503B97AEF73C4233 /* libPods-TechProject.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0B12028E2003802400E1AA79 /* TechProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B1202912003802400E1AA79 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0B1202922003802400E1AA79 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0B1202982003802400E1AA79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0B12029B2003802400E1AA79 /* TechProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TechProject.xcdatamodel; sourceTree = "<group>"; };
+		0B12029D2003802400E1AA79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0B1202A02003802400E1AA79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0B1202A22003802400E1AA79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B1202A32003802400E1AA79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0B1202D220038EB900E1AA79 /* libiconv.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.tbd; path = usr/lib/libiconv.2.tbd; sourceTree = SDKROOT; };
+		0B1202D420038EC300E1AA79 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		0B12035A2004680D00E1AA79 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		0BA5C21E2004E66900DE6F82 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		0BA5C23E2004F2FE00DE6F82 /* empty_status.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = empty_status.json; sourceTree = "<group>"; };
+		0BA5C23F2004F2FE00DE6F82 /* emoji_wink.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji_wink.json; sourceTree = "<group>"; };
+		0BA5C2662006080800DE6F82 /* TPCommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCommonDefine.h; sourceTree = "<group>"; };
+		0BA5C2692006080800DE6F82 /* TPRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPRefreshHeaderView.m; sourceTree = "<group>"; };
+		0BA5C26A2006080800DE6F82 /* TPRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPRefreshHeaderView.h; sourceTree = "<group>"; };
+		0BA5C26C2006080800DE6F82 /* TPCollectionFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCollectionFlowLayout.h; sourceTree = "<group>"; };
+		0BA5C26D2006080800DE6F82 /* TPCollectionFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCollectionFlowLayout.m; sourceTree = "<group>"; };
+		0BA5C26F2006080800DE6F82 /* TPTopLeftLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTopLeftLabel.h; sourceTree = "<group>"; };
+		0BA5C2702006080800DE6F82 /* TPTopLeftLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTopLeftLabel.m; sourceTree = "<group>"; };
+		0BA5C2722006080800DE6F82 /* TPExcelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPExcelManager.h; sourceTree = "<group>"; };
+		0BA5C2732006080800DE6F82 /* TPProjectDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPProjectDataManager.m; sourceTree = "<group>"; };
+		0BA5C2742006080800DE6F82 /* TPExcelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPExcelManager.m; sourceTree = "<group>"; };
+		0BA5C2752006080800DE6F82 /* TPProjectDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPProjectDataManager.h; sourceTree = "<group>"; };
+		0BA5C2772006080800DE6F82 /* TPProjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPProjectModel.m; sourceTree = "<group>"; };
+		0BA5C2782006080800DE6F82 /* TPProjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPProjectModel.h; sourceTree = "<group>"; };
+		0BA5C27A2006080800DE6F82 /* TPCommonViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCommonViewHelper.h; sourceTree = "<group>"; };
+		0BA5C27B2006080800DE6F82 /* TPCommonViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCommonViewHelper.m; sourceTree = "<group>"; };
+		0BA5C27F2006080800DE6F82 /* TPHomeVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPHomeVCL.m; sourceTree = "<group>"; };
+		0BA5C2802006080800DE6F82 /* TPProjectListVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPProjectListVCL.m; sourceTree = "<group>"; };
+		0BA5C2812006080800DE6F82 /* TPHomeVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPHomeVCL.h; sourceTree = "<group>"; };
+		0BA5C2822006080800DE6F82 /* TPProjectListVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPProjectListVCL.h; sourceTree = "<group>"; };
+		0BA5C2842006080800DE6F82 /* TPHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPHomeModel.h; sourceTree = "<group>"; };
+		0BA5C2852006080800DE6F82 /* TPProjectListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPProjectListModel.m; sourceTree = "<group>"; };
+		0BA5C2862006080800DE6F82 /* TPHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPHomeModel.m; sourceTree = "<group>"; };
+		0BA5C2872006080800DE6F82 /* TPProjectListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPProjectListModel.h; sourceTree = "<group>"; };
+		0BA5C2892006080800DE6F82 /* TPProjectListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPProjectListCell.m; sourceTree = "<group>"; };
+		0BA5C28A2006080800DE6F82 /* TPHomeRegionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPHomeRegionCell.m; sourceTree = "<group>"; };
+		0BA5C28B2006080800DE6F82 /* TPProjectListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPProjectListCell.h; sourceTree = "<group>"; };
+		0BA5C28C2006080800DE6F82 /* TPHomeRegionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPHomeRegionCell.h; sourceTree = "<group>"; };
+		0BA5C28E2006080800DE6F82 /* TPLaunchVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPLaunchVCL.h; sourceTree = "<group>"; };
+		0BA5C28F2006080800DE6F82 /* TPLaunchVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPLaunchVCL.m; sourceTree = "<group>"; };
+		0BA5C2922006080800DE6F82 /* TPNoticeVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPNoticeVCL.m; sourceTree = "<group>"; };
+		0BA5C2932006080800DE6F82 /* TPNoticeDetailVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPNoticeDetailVCL.h; sourceTree = "<group>"; };
+		0BA5C2942006080800DE6F82 /* TPNoticeListVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPNoticeListVCL.h; sourceTree = "<group>"; };
+		0BA5C2952006080800DE6F82 /* TPNoticeVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPNoticeVCL.h; sourceTree = "<group>"; };
+		0BA5C2962006080800DE6F82 /* TPNoticeDetailVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPNoticeDetailVCL.m; sourceTree = "<group>"; };
+		0BA5C2972006080800DE6F82 /* TPNoticeListVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPNoticeListVCL.m; sourceTree = "<group>"; };
+		0BA5C2992006080800DE6F82 /* TPNoticeListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPNoticeListItem.m; sourceTree = "<group>"; };
+		0BA5C29A2006080800DE6F82 /* TPNoticeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPNoticeService.h; sourceTree = "<group>"; };
+		0BA5C29B2006080800DE6F82 /* TPNoticeCategoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPNoticeCategoryItem.h; sourceTree = "<group>"; };
+		0BA5C29C2006080800DE6F82 /* TPNoticeListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPNoticeListModel.m; sourceTree = "<group>"; };
+		0BA5C29D2006080800DE6F82 /* TPNoticeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPNoticeModel.m; sourceTree = "<group>"; };
+		0BA5C29E2006080800DE6F82 /* TPNoticeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPNoticeService.m; sourceTree = "<group>"; };
+		0BA5C29F2006080800DE6F82 /* TPNoticeListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPNoticeListItem.h; sourceTree = "<group>"; };
+		0BA5C2A02006080800DE6F82 /* TPNoticeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPNoticeModel.h; sourceTree = "<group>"; };
+		0BA5C2A12006080800DE6F82 /* TPNoticeListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPNoticeListModel.h; sourceTree = "<group>"; };
+		0BA5C2A22006080800DE6F82 /* TPNoticeCategoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPNoticeCategoryItem.m; sourceTree = "<group>"; };
+		0BA5C2A42006080800DE6F82 /* TPNoticeListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPNoticeListCell.m; sourceTree = "<group>"; };
+		0BA5C2A52006080800DE6F82 /* TPNoticeCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPNoticeCategoryCell.h; sourceTree = "<group>"; };
+		0BA5C2A62006080800DE6F82 /* TPNoticeListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPNoticeListCell.h; sourceTree = "<group>"; };
+		0BA5C2A72006080800DE6F82 /* TPNoticeCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPNoticeCategoryCell.m; sourceTree = "<group>"; };
+		0BA5C2AA2006080800DE6F82 /* TPTabBarVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTabBarVCL.m; sourceTree = "<group>"; };
+		0BA5C2AB2006080800DE6F82 /* TPTabBarAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTabBarAnimator.m; sourceTree = "<group>"; };
+		0BA5C2AC2006080800DE6F82 /* TPTabBarVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTabBarVCL.h; sourceTree = "<group>"; };
+		0BA5C2AD2006080800DE6F82 /* TPTabBarAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTabBarAnimator.h; sourceTree = "<group>"; };
+		0BA5C2B02006080800DE6F82 /* TPClientVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPClientVCL.h; sourceTree = "<group>"; };
+		0BA5C2B12006080800DE6F82 /* TPClientVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPClientVCL.m; sourceTree = "<group>"; };
+		0BA5C2B32006080800DE6F82 /* TPClientModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPClientModel.h; sourceTree = "<group>"; };
+		0BA5C2B42006080800DE6F82 /* TPClientModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPClientModel.m; sourceTree = "<group>"; };
+		0BA5C2B72006080800DE6F82 /* UIScrollView+TPRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPRefresh.h"; sourceTree = "<group>"; };
+		0BA5C2B82006080800DE6F82 /* UIScrollView+TPRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPRefresh.m"; sourceTree = "<group>"; };
+		0BA5C2BC2006080800DE6F82 /* main11.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main11.cpp; sourceTree = "<group>"; };
+		0BA5C2BD2006080800DE6F82 /* XlsReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XlsReader.h; sourceTree = "<group>"; };
+		0BA5C2BE2006080800DE6F82 /* XlsReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XlsReader.cpp; sourceTree = "<group>"; };
+		0BA5C2BF2006080800DE6F82 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		0BA5C2C12006080800DE6F82 /* xlstypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xlstypes.h; sourceTree = "<group>"; };
+		0BA5C2C22006080800DE6F82 /* xlsstruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xlsstruct.h; sourceTree = "<group>"; };
+		0BA5C2C32006080800DE6F82 /* brdb.c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brdb.c.h; sourceTree = "<group>"; };
+		0BA5C2C42006080800DE6F82 /* xlstool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xlstool.h; sourceTree = "<group>"; };
+		0BA5C2C52006080800DE6F82 /* xls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xls.h; sourceTree = "<group>"; };
+		0BA5C2C62006080800DE6F82 /* ole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ole.h; sourceTree = "<group>"; };
+		0BA5C2C72006080800DE6F82 /* brdb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brdb.h; sourceTree = "<group>"; };
+		0BA5C2C92006080800DE6F82 /* DHxlsReaderIOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHxlsReaderIOS.m; sourceTree = "<group>"; };
+		0BA5C2CA2006080800DE6F82 /* DHxlsReaderIOS-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DHxlsReaderIOS-Prefix.pch"; sourceTree = "<group>"; };
+		0BA5C2CB2006080800DE6F82 /* DHcell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHcell.h; sourceTree = "<group>"; };
+		0BA5C2CC2006080800DE6F82 /* DHxlsReaderIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHxlsReaderIOS.h; sourceTree = "<group>"; };
+		0BA5C2CD2006080800DE6F82 /* DHcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHcell.m; sourceTree = "<group>"; };
+		0BA5C2CE2006080800DE6F82 /* DHcell-Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DHcell-Private.h"; sourceTree = "<group>"; };
+		0BA5C2D02006080800DE6F82 /* xls.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = xls.c; sourceTree = "<group>"; };
+		0BA5C2D12006080800DE6F82 /* xlstool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = xlstool.c; sourceTree = "<group>"; };
+		0BA5C2D22006080800DE6F82 /* ole.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ole.c; sourceTree = "<group>"; };
+		0BA5C2D32006080800DE6F82 /* xls2csv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = xls2csv.c; sourceTree = "<group>"; };
+		0BA5C2D42006080800DE6F82 /* getopt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = getopt.c; sourceTree = "<group>"; };
+		0BA5C2D62006080800DE6F82 /* TPBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPBaseModel.m; sourceTree = "<group>"; };
+		0BA5C2D72006080800DE6F82 /* TPBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPBaseViewController.h; sourceTree = "<group>"; };
+		0BA5C2D82006080800DE6F82 /* TPBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPBaseModel.h; sourceTree = "<group>"; };
+		0BA5C2D92006080800DE6F82 /* TPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPBaseViewController.m; sourceTree = "<group>"; };
+		0BFD23AA2004C88D00F9AFC0 /* test.xls */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.xls; sourceTree = "<group>"; };
+		4B8FAF9D1DFC2C6ADA2540E9 /* Pods-TechProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TechProject/Pods-TechProject.debug.xcconfig"; sourceTree = "<group>"; };
+		A23819E4BDAE679A1E43A265 /* Pods-TechProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TechProject/Pods-TechProject.release.xcconfig"; sourceTree = "<group>"; };
+		E84D5D3A503B97AEF73C4233 /* libPods-TechProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TechProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0B12028B2003802400E1AA79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B12035B2004680E00E1AA79 /* WebKit.framework in Frameworks */,
+				0B1202D520038EC300E1AA79 /* libiconv.tbd in Frameworks */,
+				0B1202D320038EB900E1AA79 /* libiconv.2.tbd in Frameworks */,
+				FC5E6A59ED7FD0855B2F900B /* libPods-TechProject.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B1202852003802400E1AA79 = {
+			isa = PBXGroup;
+			children = (
+				0B1202902003802400E1AA79 /* TechProject */,
+				0B12028F2003802400E1AA79 /* Products */,
+				6475817DF70E1F232712116D /* Pods */,
+				63B1142491CC6A022B4C0243 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0B12028F2003802400E1AA79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B12028E2003802400E1AA79 /* TechProject.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0B1202902003802400E1AA79 /* TechProject */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2652006080800DE6F82 /* Common */,
+				0BA5C2B52006080800DE6F82 /* Core */,
+				0BA5C27C2006080800DE6F82 /* Feature */,
+				0B1202D620039F4300E1AA79 /* Resources */,
+				0B1202912003802400E1AA79 /* AppDelegate.h */,
+				0B1202922003802400E1AA79 /* AppDelegate.m */,
+				0B1202972003802400E1AA79 /* Main.storyboard */,
+				0B1202A22003802400E1AA79 /* Info.plist */,
+				0B12029D2003802400E1AA79 /* Assets.xcassets */,
+			);
+			path = TechProject;
+			sourceTree = "<group>";
+		};
+		0B1202D620039F4300E1AA79 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C21D2004E66900DE6F82 /* animate */,
+				0BFD23AA2004C88D00F9AFC0 /* test.xls */,
+				0B12029F2003802400E1AA79 /* LaunchScreen.storyboard */,
+				0B12029A2003802400E1AA79 /* TechProject.xcdatamodeld */,
+				0B1202A32003802400E1AA79 /* main.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0BA5C21D2004E66900DE6F82 /* animate */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C23F2004F2FE00DE6F82 /* emoji_wink.json */,
+				0BA5C23E2004F2FE00DE6F82 /* empty_status.json */,
+				0BA5C21E2004E66900DE6F82 /* loading.json */,
+			);
+			path = animate;
+			sourceTree = "<group>";
+		};
+		0BA5C2652006080800DE6F82 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2662006080800DE6F82 /* TPCommonDefine.h */,
+				0BA5C2672006080800DE6F82 /* Component */,
+				0BA5C2712006080800DE6F82 /* Manager */,
+				0BA5C2762006080800DE6F82 /* Model */,
+				0BA5C2792006080800DE6F82 /* Helper */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0BA5C2672006080800DE6F82 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2682006080800DE6F82 /* Refresh */,
+				0BA5C26B2006080800DE6F82 /* Layout */,
+				0BA5C26E2006080800DE6F82 /* Lable */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		0BA5C2682006080800DE6F82 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2692006080800DE6F82 /* TPRefreshHeaderView.m */,
+				0BA5C26A2006080800DE6F82 /* TPRefreshHeaderView.h */,
+			);
+			path = Refresh;
+			sourceTree = "<group>";
+		};
+		0BA5C26B2006080800DE6F82 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C26C2006080800DE6F82 /* TPCollectionFlowLayout.h */,
+				0BA5C26D2006080800DE6F82 /* TPCollectionFlowLayout.m */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		0BA5C26E2006080800DE6F82 /* Lable */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C26F2006080800DE6F82 /* TPTopLeftLabel.h */,
+				0BA5C2702006080800DE6F82 /* TPTopLeftLabel.m */,
+			);
+			path = Lable;
+			sourceTree = "<group>";
+		};
+		0BA5C2712006080800DE6F82 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2722006080800DE6F82 /* TPExcelManager.h */,
+				0BA5C2732006080800DE6F82 /* TPProjectDataManager.m */,
+				0BA5C2742006080800DE6F82 /* TPExcelManager.m */,
+				0BA5C2752006080800DE6F82 /* TPProjectDataManager.h */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		0BA5C2762006080800DE6F82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2772006080800DE6F82 /* TPProjectModel.m */,
+				0BA5C2782006080800DE6F82 /* TPProjectModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0BA5C2792006080800DE6F82 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C27A2006080800DE6F82 /* TPCommonViewHelper.h */,
+				0BA5C27B2006080800DE6F82 /* TPCommonViewHelper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		0BA5C27C2006080800DE6F82 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C27D2006080800DE6F82 /* Home */,
+				0BA5C28D2006080800DE6F82 /* Launch */,
+				0BA5C2902006080800DE6F82 /* Notice */,
+				0BA5C2A82006080800DE6F82 /* Main */,
+				0BA5C2AE2006080800DE6F82 /* Client */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		0BA5C27D2006080800DE6F82 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C27E2006080800DE6F82 /* Controller */,
+				0BA5C2832006080800DE6F82 /* Model */,
+				0BA5C2882006080800DE6F82 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0BA5C27E2006080800DE6F82 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C27F2006080800DE6F82 /* TPHomeVCL.m */,
+				0BA5C2802006080800DE6F82 /* TPProjectListVCL.m */,
+				0BA5C2812006080800DE6F82 /* TPHomeVCL.h */,
+				0BA5C2822006080800DE6F82 /* TPProjectListVCL.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0BA5C2832006080800DE6F82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2842006080800DE6F82 /* TPHomeModel.h */,
+				0BA5C2852006080800DE6F82 /* TPProjectListModel.m */,
+				0BA5C2862006080800DE6F82 /* TPHomeModel.m */,
+				0BA5C2872006080800DE6F82 /* TPProjectListModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0BA5C2882006080800DE6F82 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2892006080800DE6F82 /* TPProjectListCell.m */,
+				0BA5C28A2006080800DE6F82 /* TPHomeRegionCell.m */,
+				0BA5C28B2006080800DE6F82 /* TPProjectListCell.h */,
+				0BA5C28C2006080800DE6F82 /* TPHomeRegionCell.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0BA5C28D2006080800DE6F82 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C28E2006080800DE6F82 /* TPLaunchVCL.h */,
+				0BA5C28F2006080800DE6F82 /* TPLaunchVCL.m */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		0BA5C2902006080800DE6F82 /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2912006080800DE6F82 /* Controller */,
+				0BA5C2982006080800DE6F82 /* Model */,
+				0BA5C2A32006080800DE6F82 /* View */,
+			);
+			path = Notice;
+			sourceTree = "<group>";
+		};
+		0BA5C2912006080800DE6F82 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2922006080800DE6F82 /* TPNoticeVCL.m */,
+				0BA5C2932006080800DE6F82 /* TPNoticeDetailVCL.h */,
+				0BA5C2942006080800DE6F82 /* TPNoticeListVCL.h */,
+				0BA5C2952006080800DE6F82 /* TPNoticeVCL.h */,
+				0BA5C2962006080800DE6F82 /* TPNoticeDetailVCL.m */,
+				0BA5C2972006080800DE6F82 /* TPNoticeListVCL.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0BA5C2982006080800DE6F82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2992006080800DE6F82 /* TPNoticeListItem.m */,
+				0BA5C29A2006080800DE6F82 /* TPNoticeService.h */,
+				0BA5C29B2006080800DE6F82 /* TPNoticeCategoryItem.h */,
+				0BA5C29C2006080800DE6F82 /* TPNoticeListModel.m */,
+				0BA5C29D2006080800DE6F82 /* TPNoticeModel.m */,
+				0BA5C29E2006080800DE6F82 /* TPNoticeService.m */,
+				0BA5C29F2006080800DE6F82 /* TPNoticeListItem.h */,
+				0BA5C2A02006080800DE6F82 /* TPNoticeModel.h */,
+				0BA5C2A12006080800DE6F82 /* TPNoticeListModel.h */,
+				0BA5C2A22006080800DE6F82 /* TPNoticeCategoryItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0BA5C2A32006080800DE6F82 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2A42006080800DE6F82 /* TPNoticeListCell.m */,
+				0BA5C2A52006080800DE6F82 /* TPNoticeCategoryCell.h */,
+				0BA5C2A62006080800DE6F82 /* TPNoticeListCell.h */,
+				0BA5C2A72006080800DE6F82 /* TPNoticeCategoryCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0BA5C2A82006080800DE6F82 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2A92006080800DE6F82 /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0BA5C2A92006080800DE6F82 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2AA2006080800DE6F82 /* TPTabBarVCL.m */,
+				0BA5C2AB2006080800DE6F82 /* TPTabBarAnimator.m */,
+				0BA5C2AC2006080800DE6F82 /* TPTabBarVCL.h */,
+				0BA5C2AD2006080800DE6F82 /* TPTabBarAnimator.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0BA5C2AE2006080800DE6F82 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2AF2006080800DE6F82 /* Controller */,
+				0BA5C2B22006080800DE6F82 /* Model */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		0BA5C2AF2006080800DE6F82 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2B02006080800DE6F82 /* TPClientVCL.h */,
+				0BA5C2B12006080800DE6F82 /* TPClientVCL.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0BA5C2B22006080800DE6F82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2B32006080800DE6F82 /* TPClientModel.h */,
+				0BA5C2B42006080800DE6F82 /* TPClientModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0BA5C2B52006080800DE6F82 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2B62006080800DE6F82 /* Category */,
+				0BA5C2B92006080800DE6F82 /* ThirdPart */,
+				0BA5C2D52006080800DE6F82 /* Base */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0BA5C2B62006080800DE6F82 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2B72006080800DE6F82 /* UIScrollView+TPRefresh.h */,
+				0BA5C2B82006080800DE6F82 /* UIScrollView+TPRefresh.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		0BA5C2B92006080800DE6F82 /* ThirdPart */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2BA2006080800DE6F82 /* DHxlsReader */,
+			);
+			path = ThirdPart;
+			sourceTree = "<group>";
+		};
+		0BA5C2BA2006080800DE6F82 /* DHxlsReader */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2BB2006080800DE6F82 /* cplusplus */,
+				0BA5C2BF2006080800DE6F82 /* config.h */,
+				0BA5C2C02006080800DE6F82 /* libxls */,
+				0BA5C2C82006080800DE6F82 /* DHxlsReaderIOS */,
+				0BA5C2CF2006080800DE6F82 /* src */,
+			);
+			path = DHxlsReader;
+			sourceTree = "<group>";
+		};
+		0BA5C2BB2006080800DE6F82 /* cplusplus */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2BC2006080800DE6F82 /* main11.cpp */,
+				0BA5C2BD2006080800DE6F82 /* XlsReader.h */,
+				0BA5C2BE2006080800DE6F82 /* XlsReader.cpp */,
+			);
+			path = cplusplus;
+			sourceTree = "<group>";
+		};
+		0BA5C2C02006080800DE6F82 /* libxls */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2C12006080800DE6F82 /* xlstypes.h */,
+				0BA5C2C22006080800DE6F82 /* xlsstruct.h */,
+				0BA5C2C32006080800DE6F82 /* brdb.c.h */,
+				0BA5C2C42006080800DE6F82 /* xlstool.h */,
+				0BA5C2C52006080800DE6F82 /* xls.h */,
+				0BA5C2C62006080800DE6F82 /* ole.h */,
+				0BA5C2C72006080800DE6F82 /* brdb.h */,
+			);
+			path = libxls;
+			sourceTree = "<group>";
+		};
+		0BA5C2C82006080800DE6F82 /* DHxlsReaderIOS */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2C92006080800DE6F82 /* DHxlsReaderIOS.m */,
+				0BA5C2CA2006080800DE6F82 /* DHxlsReaderIOS-Prefix.pch */,
+				0BA5C2CB2006080800DE6F82 /* DHcell.h */,
+				0BA5C2CC2006080800DE6F82 /* DHxlsReaderIOS.h */,
+				0BA5C2CD2006080800DE6F82 /* DHcell.m */,
+				0BA5C2CE2006080800DE6F82 /* DHcell-Private.h */,
+			);
+			path = DHxlsReaderIOS;
+			sourceTree = "<group>";
+		};
+		0BA5C2CF2006080800DE6F82 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2D02006080800DE6F82 /* xls.c */,
+				0BA5C2D12006080800DE6F82 /* xlstool.c */,
+				0BA5C2D22006080800DE6F82 /* ole.c */,
+				0BA5C2D32006080800DE6F82 /* xls2csv.c */,
+				0BA5C2D42006080800DE6F82 /* getopt.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		0BA5C2D52006080800DE6F82 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0BA5C2D62006080800DE6F82 /* TPBaseModel.m */,
+				0BA5C2D72006080800DE6F82 /* TPBaseViewController.h */,
+				0BA5C2D82006080800DE6F82 /* TPBaseModel.h */,
+				0BA5C2D92006080800DE6F82 /* TPBaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		63B1142491CC6A022B4C0243 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B12035A2004680D00E1AA79 /* WebKit.framework */,
+				0B1202D420038EC300E1AA79 /* libiconv.tbd */,
+				0B1202D220038EB900E1AA79 /* libiconv.2.tbd */,
+				E84D5D3A503B97AEF73C4233 /* libPods-TechProject.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6475817DF70E1F232712116D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B8FAF9D1DFC2C6ADA2540E9 /* Pods-TechProject.debug.xcconfig */,
+				A23819E4BDAE679A1E43A265 /* Pods-TechProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0B12028D2003802400E1AA79 /* TechProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B1202A72003802400E1AA79 /* Build configuration list for PBXNativeTarget "TechProject" */;
+			buildPhases = (
+				49E59F4117C84E8C635E5E51 /* [CP] Check Pods Manifest.lock */,
+				0B12028A2003802400E1AA79 /* Sources */,
+				0B12028B2003802400E1AA79 /* Frameworks */,
+				0B12028C2003802400E1AA79 /* Resources */,
+				216BFA04CCA9AA235436E691 /* [CP] Embed Pods Frameworks */,
+				8AB6607293DF048AD8346C32 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TechProject;
+			productName = TechProject;
+			productReference = 0B12028E2003802400E1AA79 /* TechProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0B1202862003802400E1AA79 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = zhengjiacheng;
+				TargetAttributes = {
+					0B12028D2003802400E1AA79 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 0B1202892003802400E1AA79 /* Build configuration list for PBXProject "TechProject" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0B1202852003802400E1AA79;
+			productRefGroup = 0B12028F2003802400E1AA79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0B12028D2003802400E1AA79 /* TechProject */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0B12028C2003802400E1AA79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BA5C2412004F2FE00DE6F82 /* emoji_wink.json in Resources */,
+				0B1202A12003802400E1AA79 /* LaunchScreen.storyboard in Resources */,
+				0BA5C2402004F2FE00DE6F82 /* empty_status.json in Resources */,
+				0BFD23AC2004C88D00F9AFC0 /* test.xls in Resources */,
+				0B12029E2003802400E1AA79 /* Assets.xcassets in Resources */,
+				0B1202992003802400E1AA79 /* Main.storyboard in Resources */,
+				0BA5C2202004E66900DE6F82 /* loading.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		216BFA04CCA9AA235436E691 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TechProject/Pods-TechProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49E59F4117C84E8C635E5E51 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8AB6607293DF048AD8346C32 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TechProject/Pods-TechProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B12028A2003802400E1AA79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B12029C2003802400E1AA79 /* TechProject.xcdatamodeld in Sources */,
+				0BA5C2E02006080800DE6F82 /* TPCommonViewHelper.m in Sources */,
+				0BA5C2F42006080800DE6F82 /* TPClientVCL.m in Sources */,
+				0BA5C2FB2006080800DE6F82 /* xls.c in Sources */,
+				0BA5C2DD2006080800DE6F82 /* TPProjectDataManager.m in Sources */,
+				0BA5C2F52006080800DE6F82 /* TPClientModel.m in Sources */,
+				0BA5C3002006080800DE6F82 /* TPBaseModel.m in Sources */,
+				0BA5C2E12006080800DE6F82 /* TPHomeVCL.m in Sources */,
+				0BA5C2FE2006080800DE6F82 /* xls2csv.c in Sources */,
+				0BA5C2F32006080800DE6F82 /* TPTabBarAnimator.m in Sources */,
+				0B1202A42003802400E1AA79 /* main.m in Sources */,
+				0BA5C2ED2006080800DE6F82 /* TPNoticeModel.m in Sources */,
+				0BA5C2F72006080800DE6F82 /* main11.cpp in Sources */,
+				0BA5C2E32006080800DE6F82 /* TPProjectListModel.m in Sources */,
+				0BA5C2E52006080800DE6F82 /* TPProjectListCell.m in Sources */,
+				0BA5C2DE2006080800DE6F82 /* TPExcelManager.m in Sources */,
+				0BA5C3012006080800DE6F82 /* TPBaseViewController.m in Sources */,
+				0BA5C2E92006080800DE6F82 /* TPNoticeDetailVCL.m in Sources */,
+				0BA5C2FF2006080800DE6F82 /* getopt.c in Sources */,
+				0B1202932003802400E1AA79 /* AppDelegate.m in Sources */,
+				0BA5C2DC2006080800DE6F82 /* TPTopLeftLabel.m in Sources */,
+				0BA5C2EA2006080800DE6F82 /* TPNoticeListVCL.m in Sources */,
+				0BA5C2E72006080800DE6F82 /* TPLaunchVCL.m in Sources */,
+				0BA5C2EC2006080800DE6F82 /* TPNoticeListModel.m in Sources */,
+				0BA5C2E82006080800DE6F82 /* TPNoticeVCL.m in Sources */,
+				0BA5C2F12006080800DE6F82 /* TPNoticeCategoryCell.m in Sources */,
+				0BA5C2F22006080800DE6F82 /* TPTabBarVCL.m in Sources */,
+				0BA5C2DF2006080800DE6F82 /* TPProjectModel.m in Sources */,
+				0BA5C2FA2006080800DE6F82 /* DHcell.m in Sources */,
+				0BA5C2E22006080800DE6F82 /* TPProjectListVCL.m in Sources */,
+				0BA5C2F82006080800DE6F82 /* XlsReader.cpp in Sources */,
+				0BA5C2FD2006080800DE6F82 /* ole.c in Sources */,
+				0BA5C2DA2006080800DE6F82 /* TPRefreshHeaderView.m in Sources */,
+				0BA5C2EF2006080800DE6F82 /* TPNoticeCategoryItem.m in Sources */,
+				0BA5C2F62006080800DE6F82 /* UIScrollView+TPRefresh.m in Sources */,
+				0BA5C2F92006080800DE6F82 /* DHxlsReaderIOS.m in Sources */,
+				0BA5C2FC2006080800DE6F82 /* xlstool.c in Sources */,
+				0BA5C2EE2006080800DE6F82 /* TPNoticeService.m in Sources */,
+				0BA5C2EB2006080800DE6F82 /* TPNoticeListItem.m in Sources */,
+				0BA5C2E42006080800DE6F82 /* TPHomeModel.m in Sources */,
+				0BA5C2F02006080800DE6F82 /* TPNoticeListCell.m in Sources */,
+				0BA5C2E62006080800DE6F82 /* TPHomeRegionCell.m in Sources */,
+				0BA5C2DB2006080800DE6F82 /* TPCollectionFlowLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0B1202972003802400E1AA79 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B1202982003802400E1AA79 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0B12029F2003802400E1AA79 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B1202A02003802400E1AA79 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0B1202A52003802400E1AA79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0B1202A62003802400E1AA79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0B1202A82003802400E1AA79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B8FAF9D1DFC2C6ADA2540E9 /* Pods-TechProject.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MSPQ3852F6;
+				INFOPLIST_FILE = TechProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhengjiacheng.TechProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0B1202A92003802400E1AA79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A23819E4BDAE679A1E43A265 /* Pods-TechProject.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MSPQ3852F6;
+				INFOPLIST_FILE = TechProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhengjiacheng.TechProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B1202892003802400E1AA79 /* Build configuration list for PBXProject "TechProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B1202A52003802400E1AA79 /* Debug */,
+				0B1202A62003802400E1AA79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B1202A72003802400E1AA79 /* Build configuration list for PBXNativeTarget "TechProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B1202A82003802400E1AA79 /* Debug */,
+				0B1202A92003802400E1AA79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0B12029A2003802400E1AA79 /* TechProject.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0B12029B2003802400E1AA79 /* TechProject.xcdatamodel */,
+			);
+			currentVersion = 0B12029B2003802400E1AA79 /* TechProject.xcdatamodel */;
+			path = TechProject.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 0B1202862003802400E1AA79 /* Project object */;
+}
