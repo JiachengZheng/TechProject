@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Bd4-ws-otJ"; */
+"Bd4-ws-otJ.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Cow-74-Ix6"; */
+"Cow-74-Ix6.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "公告"; ObjectID = "HNW-AK-nv2"; */
+"HNW-AK-nv2.title" = "公告";
+
+/* Class = "UITabBarItem"; title = "项目"; ObjectID = "Sn2-o4-9Yw"; */
+"Sn2-o4-9Yw.title" = "项目";
+
+/* Class = "UILabel"; text = "LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel"; ObjectID = "Wqr-pb-wOb"; */
+"Wqr-pb-wOb.text" = "LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ZQk-qE-GXk"; */
+"ZQk-qE-GXk.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gvB-ID-e1h"; */
+"gvB-ID-e1h.text" = "Label";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "iFm-UT-LLa"; */
+"iFm-UT-LLa.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UITabBarItem"; title = "客户"; ObjectID = "lGw-we-q3K"; */
+"lGw-we-q3K.title" = "客户";
