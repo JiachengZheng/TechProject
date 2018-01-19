@@ -15,6 +15,8 @@
 #import "TPExcelManager.h"
 #import "TPHomeModel.h"
 #import "TPProjectListVCL.h"
+#import "TPSeachProjectVCL.h"
+#import "TPSnowView.h"
 NSInteger kItemsCount = 3;
 
 @interface TPHomeVCL ()<UICollectionViewDelegate, UICollectionViewDataSource>
@@ -30,13 +32,17 @@ NSInteger kItemsCount = 3;
     self = [super initWithCoder:coder];
     if (self) {
         self.model = [TPHomeModel new];
+        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(loadItems) name:kTPDidReadExcelContentNotification object:nil];
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    //设置控制器图片(使用imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal,不被系统渲染成蓝色)
+    self.tabBarItem.image = [[UIImage imageNamed:@"tab_home"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.tabBarItem.selectedImage = [[UIImage imageNamed:@"tab_home_selected"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
     [self addNaviBar];
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
@@ -57,19 +63,47 @@ NSInteger kItemsCount = 3;
 - (void)loadItems{
     if (!self.model.items || self.model.items.count < 1) {
         [self showLoading];
+        [self hideNoDataView];
     }
     __weak typeof(self) instance = self;
     [self.model loadItems:nil completion:^(NSDictionary *suc) {
         [instance hideLoading];
+        [instance hideNoDataView];
         [instance.collecitonView reloadData];
+        if (instance.model.items.count < 1) {
+            [instance showNoDataView];
+        }
     } failure:^(NSError *error) {
         [instance hideLoading];
+        [instance hideNoDataView];
     }];
 }
 
 - (void)addNaviBar{
     UIView *naviBar = [TPCommonViewHelper createNavigationBar:@"项目" enableBackButton:NO];
     [self.view addSubview:naviBar];
+    
+    UIButton *searchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [searchBtn addTarget:self action:@selector(openSearchVCL) forControlEvents:UIControlEventTouchUpInside];
+    [searchBtn setImage:[UIImage imageNamed:@"search"] forState:UIControlStateNormal];
+    [naviBar addSubview:searchBtn];
+    searchBtn.frame = CGRectMake(TPScreenWidth - 44, 20, 44, 44);
+    
+    UIButton *favoriteBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [favoriteBtn addTarget:self action:@selector(openFavoriteVCL) forControlEvents:UIControlEventTouchUpInside];
+    [favoriteBtn setImage:[UIImage imageNamed:@"favorite"] forState:UIControlStateNormal];
+    [naviBar addSubview:favoriteBtn];
+    favoriteBtn.frame = CGRectMake(4, 20, 44, 44);
+}
+
+- (void)openSearchVCL{
+    UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    TPSeachProjectVCL *vcl = (TPSeachProjectVCL *)[main instantiateViewControllerWithIdentifier:@"TPSeachProjectVCL"];
+    [self.navigationController pushViewController:vcl animated:YES];
+}
+
+- (void)openFavoriteVCL{
+    
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -89,6 +123,10 @@ NSInteger kItemsCount = 3;
     TPProjectListVCL *listVCL = (TPProjectListVCL *)[main instantiateViewControllerWithIdentifier:@"TPProjectListVCL"];
     listVCL.region = item.region;
     [self.navigationController pushViewController:listVCL animated:YES];
+}
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
 

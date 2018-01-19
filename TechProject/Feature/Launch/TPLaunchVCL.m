@@ -16,15 +16,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    LOTAnimationView *animation = [LOTAnimationView animationNamed:@"emoji_wink" inBundle:[NSBundle mainBundle]];
+    LOTAnimationView *animation = [LOTAnimationView animationNamed:@"down" inBundle:[NSBundle mainBundle]];
     animation.frame = self.view.bounds;
-    animation.contentMode = UIViewContentModeScaleAspectFit;
+//    animation.loopAnimation = YES;
+    animation.centerX -= 15 ;
+    animation.contentMode = UIViewContentModeScaleAspectFill;
     [self.view addSubview:animation];
     animation.backgroundColor = [UIColor whiteColor];
     self.animation = animation;
     self.view.backgroundColor = [UIColor whiteColor];
     
+    [self addWelcomeLabel];
     // Do any additional setup after loading the view.
+}
+
+- (void)addWelcomeLabel{
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, TPScreenHeight - 90, TPScreenWidth, 50)];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.font = [UIFont systemFontOfSize:15];
+    label.textColor = [UIColor colorWithHexString:@"5C5D5D"];
+    label.text = @"欢迎回来";
+    [self.view addSubview:label];
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -36,9 +48,8 @@
     [[UIApplication sharedApplication] setStatusBarHidden:YES animated:NO];
     [self.animation playWithCompletion:^(BOOL animationFinished) {
         [[UIApplication sharedApplication] setStatusBarHidden:NO animated:NO];
-        [UIView animateWithDuration:0.7 animations:^{
+        [UIView animateWithDuration:0.4 animations:^{
             self.view.alpha = 0;
-            self.view.transform = CGAffineTransformMakeScale(1.3, 1.3);
         }completion:^(BOOL finished) {
             [self.animation removeFromSuperview];
             self.animation = nil;

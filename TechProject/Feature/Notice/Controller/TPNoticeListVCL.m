@@ -40,6 +40,11 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+}
+
 - (void)loadData{
     if (!self.model.items || self.model.items.count < 1) {
         [self showLoading];
@@ -75,6 +80,7 @@
     TPNoticeListItem *item = self.model.items[indexPath.row];
     NSURL *url = [NSURL URLWithString:item.url];
     SFSafariViewController *safariVc = [[SFSafariViewController alloc] initWithURL:url];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     [self presentViewController:safariVc animated:YES completion:nil];
     
 //    TPNoticeDetailVCL *listVCL = [TPNoticeDetailVCL new];

@@ -32,6 +32,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addNaviBar];
+    self.tabBarItem.image = [[UIImage imageNamed:@"tab_notice"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.tabBarItem.selectedImage = [[UIImage imageNamed:@"tab_notice_selected"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     __weak typeof(self) instance = self;
     [self.collectionView addRefreshHeaderWithHandle:^{
         [instance loadData];
@@ -40,7 +42,7 @@
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     layout.minimumLineSpacing = 0;
     layout.minimumInteritemSpacing = 0;
-    layout.itemSize = CGSizeMake(TPScreenWidth/4, TPScreenWidth/4);
+    layout.itemSize = CGSizeMake(TPScreenWidth/3, TPScreenWidth/3 - 20);
     self.collectionView.collectionViewLayout = layout;
     self.collectionView.alwaysBounceVertical = YES;
     self.collectionView.frame = CGRectMake(0, TPStatusBarAndNavigationBarHeight, TPScreenWidth, TPScreenHeight - TPStatusBarAndNavigationBarHeight - TPTabbarSafeBottomMargin);

@@ -8,16 +8,42 @@
 
 #import "TPTabBarVCL.h"
 #import "TPTabBarAnimator.h"
-
+#import "TPSnowView.h"
+#import <YYCategories.h>
+#import "TPCommonDefine.h"
 @interface TPTabBarVCL()<UITabBarDelegate>
 @property (nonatomic, assign) NSInteger curIndex;
 @property (nonatomic, strong) TPTabBarAnimator *tabbarAnimator;
+@property (nonatomic, strong) TPSnowView *snow;
 @end
 
 @implementation TPTabBarVCL
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    [[UITabBar appearance] setBarTintColor:[UIColor whiteColor]];
+    //改变tabbarController 文字选中颜色(默认渲染为蓝色)
+    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:[UIColor lightGrayColor]} forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:[UIColor colorWithHexString:@"3BB3F7"]} forState:UIControlStateSelected];
+}
+
+-(void)viewDidAppear:(BOOL) animated{
+    [super viewDidAppear:animated];
+    [self.view becomeFirstResponder];
+}
+
+-(void)viewDidDisappear:(BOOL) animated{
+    [super viewDidDisappear:animated];
+    [self.view resignFirstResponder];
+}
+
+#pragma mark 运动开始
+-(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    if (motion==UIEventSubtypeMotionShake) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [TPSnowView show];
+        });
+    }
 }
 
 - (void)animationWithIndex:(NSInteger)index{
@@ -40,7 +66,7 @@
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     NSInteger index = [self.tabBar.items indexOfObject:item];
     if (self.curIndex != index) {
-        [self animationWithIndex:index];
+//        [self animationWithIndex:index];
     }
 }
 

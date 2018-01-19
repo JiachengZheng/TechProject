@@ -14,4 +14,6 @@
 @property (nonatomic, copy, readonly)NSArray <TPProjectModel *>*projectArr;
 
 + (instancetype)shareInstance;
+- (void)addProjectFromExcel:(NSString *)path;
+- (void)loadData;
 @end

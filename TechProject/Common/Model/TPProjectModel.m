@@ -7,8 +7,9 @@
 //
 
 #import "TPProjectModel.h"
-
+#import "TPEncodeAndDecoded.h"
 @implementation TPProjectModel
+ENCODED_AND_DECODED()
 - (instancetype)init
 {
     self = [super init];
@@ -19,6 +20,7 @@
 }
 @end
 @implementation TPProjectRegionModel
+ENCODED_AND_DECODED()
 - (instancetype)init
 {
     self = [super init];

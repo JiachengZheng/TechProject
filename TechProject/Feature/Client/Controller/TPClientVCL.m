@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tabBarItem.image = [[UIImage imageNamed:@"tab_client"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.tabBarItem.selectedImage = [[UIImage imageNamed:@"tab_client_selected"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     [self addNaviBar];
+    [self showNoDataView];
     // Do any additional setup after loading the view.
 }
 

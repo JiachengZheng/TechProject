@@ -16,6 +16,13 @@
 		0B1202D320038EB900E1AA79 /* libiconv.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1202D220038EB900E1AA79 /* libiconv.2.tbd */; };
 		0B1202D520038EC300E1AA79 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1202D420038EC300E1AA79 /* libiconv.tbd */; };
 		0B12035B2004680E00E1AA79 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B12035A2004680D00E1AA79 /* WebKit.framework */; };
+		0B1F37982010B36700C24364 /* TPNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1F37972010B36700C24364 /* TPNoDataView.m */; };
+		0B437C132010BD7300048C37 /* TPSnowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B437C122010BD7300048C37 /* TPSnowView.m */; };
+		0B437C1B2011F72100048C37 /* down.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B437C1A2011F72000048C37 /* down.json */; };
+		0B79CE76200F508C00B704E9 /* initial_data_project.xls in Resources */ = {isa = PBXBuildFile; fileRef = 0B79CE75200F508C00B704E9 /* initial_data_project.xls */; };
+		0B79CE7A200F541700B704E9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B79CE79200F541700B704E9 /* CoreData.framework */; };
+		0B79CE8A200F76E400B704E9 /* TPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B79CE89200F76E400B704E9 /* TPUtil.m */; };
+		0B79CE902010569400B704E9 /* TPSeachProjectVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B79CE8F2010569400B704E9 /* TPSeachProjectVCL.m */; };
 		0BA5C2202004E66900DE6F82 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BA5C21E2004E66900DE6F82 /* loading.json */; };
 		0BA5C2402004F2FE00DE6F82 /* empty_status.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BA5C23E2004F2FE00DE6F82 /* empty_status.json */; };
 		0BA5C2412004F2FE00DE6F82 /* emoji_wink.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BA5C23F2004F2FE00DE6F82 /* emoji_wink.json */; };
@@ -59,7 +66,12 @@
 		0BA5C2FF2006080800DE6F82 /* getopt.c in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2D42006080800DE6F82 /* getopt.c */; };
 		0BA5C3002006080800DE6F82 /* TPBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2D62006080800DE6F82 /* TPBaseModel.m */; };
 		0BA5C3012006080800DE6F82 /* TPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2D92006080800DE6F82 /* TPBaseViewController.m */; };
-		0BFD23AC2004C88D00F9AFC0 /* test.xls in Resources */ = {isa = PBXBuildFile; fileRef = 0BFD23AA2004C88D00F9AFC0 /* test.xls */; };
+		0BC285E2200CAA0D00B77B69 /* TPProjectDetailVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC285E1200CAA0D00B77B69 /* TPProjectDetailVCL.m */; };
+		0BC285E8200CAF3B00B77B69 /* UIButton+TPButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC285E7200CAF3B00B77B69 /* UIButton+TPButton.m */; };
+		0BC285EA200CAF7300B77B69 /* like.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BC285E9200CAF7300B77B69 /* like.json */; };
+		0BC285ED200CD5C100B77B69 /* TPProjectInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC285EC200CD5C100B77B69 /* TPProjectInfoCell.m */; };
+		0BC285F0200CD85900B77B69 /* TPProjectDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC285EF200CD85900B77B69 /* TPProjectDetailModel.m */; };
+		0BC285F3200CDC8F00B77B69 /* TPProjectDetailNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC285F2200CDC8F00B77B69 /* TPProjectDetailNameCell.m */; };
 		FC5E6A59ED7FD0855B2F900B /* libPods-TechProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E84D5D3A503B97AEF73C4233 /* libPods-TechProject.a */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +88,20 @@
 		0B1202D220038EB900E1AA79 /* libiconv.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.tbd; path = usr/lib/libiconv.2.tbd; sourceTree = SDKROOT; };
 		0B1202D420038EC300E1AA79 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		0B12035A2004680D00E1AA79 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		0B1F37962010B36700C24364 /* TPNoDataView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPNoDataView.h; sourceTree = "<group>"; };
+		0B1F37972010B36700C24364 /* TPNoDataView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPNoDataView.m; sourceTree = "<group>"; };
+		0B437C112010BD7300048C37 /* TPSnowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPSnowView.h; sourceTree = "<group>"; };
+		0B437C122010BD7300048C37 /* TPSnowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPSnowView.m; sourceTree = "<group>"; };
+		0B437C1A2011F72000048C37 /* down.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = down.json; sourceTree = "<group>"; };
+		0B79CE75200F508C00B704E9 /* initial_data_project.xls */ = {isa = PBXFileReference; lastKnownFileType = file; path = initial_data_project.xls; sourceTree = "<group>"; };
+		0B79CE78200F52F000B704E9 /* TPEncodeAndDecoded.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPEncodeAndDecoded.h; sourceTree = "<group>"; };
+		0B79CE79200F541700B704E9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0B79CE88200F76E400B704E9 /* TPUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPUtil.h; sourceTree = "<group>"; };
+		0B79CE89200F76E400B704E9 /* TPUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPUtil.m; sourceTree = "<group>"; };
+		0B79CE8E2010569400B704E9 /* TPSeachProjectVCL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPSeachProjectVCL.h; sourceTree = "<group>"; };
+		0B79CE8F2010569400B704E9 /* TPSeachProjectVCL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPSeachProjectVCL.m; sourceTree = "<group>"; };
+		0B79CE91201073F700B704E9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		0B79CE92201073F700B704E9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		0BA5C21E2004E66900DE6F82 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		0BA5C23E2004F2FE00DE6F82 /* empty_status.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = empty_status.json; sourceTree = "<group>"; };
 		0BA5C23F2004F2FE00DE6F82 /* emoji_wink.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emoji_wink.json; sourceTree = "<group>"; };
@@ -164,7 +190,17 @@
 		0BA5C2D72006080800DE6F82 /* TPBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPBaseViewController.h; sourceTree = "<group>"; };
 		0BA5C2D82006080800DE6F82 /* TPBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPBaseModel.h; sourceTree = "<group>"; };
 		0BA5C2D92006080800DE6F82 /* TPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPBaseViewController.m; sourceTree = "<group>"; };
-		0BFD23AA2004C88D00F9AFC0 /* test.xls */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.xls; sourceTree = "<group>"; };
+		0BC285E0200CAA0D00B77B69 /* TPProjectDetailVCL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPProjectDetailVCL.h; sourceTree = "<group>"; };
+		0BC285E1200CAA0D00B77B69 /* TPProjectDetailVCL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPProjectDetailVCL.m; sourceTree = "<group>"; };
+		0BC285E6200CAF3B00B77B69 /* UIButton+TPButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+TPButton.h"; sourceTree = "<group>"; };
+		0BC285E7200CAF3B00B77B69 /* UIButton+TPButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TPButton.m"; sourceTree = "<group>"; };
+		0BC285E9200CAF7300B77B69 /* like.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = like.json; sourceTree = "<group>"; };
+		0BC285EB200CD5C100B77B69 /* TPProjectInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPProjectInfoCell.h; sourceTree = "<group>"; };
+		0BC285EC200CD5C100B77B69 /* TPProjectInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPProjectInfoCell.m; sourceTree = "<group>"; };
+		0BC285EE200CD85900B77B69 /* TPProjectDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPProjectDetailModel.h; sourceTree = "<group>"; };
+		0BC285EF200CD85900B77B69 /* TPProjectDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPProjectDetailModel.m; sourceTree = "<group>"; };
+		0BC285F1200CDC8F00B77B69 /* TPProjectDetailNameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPProjectDetailNameCell.h; sourceTree = "<group>"; };
+		0BC285F2200CDC8F00B77B69 /* TPProjectDetailNameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPProjectDetailNameCell.m; sourceTree = "<group>"; };
 		4B8FAF9D1DFC2C6ADA2540E9 /* Pods-TechProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TechProject/Pods-TechProject.debug.xcconfig"; sourceTree = "<group>"; };
 		A23819E4BDAE679A1E43A265 /* Pods-TechProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TechProject/Pods-TechProject.release.xcconfig"; sourceTree = "<group>"; };
 		E84D5D3A503B97AEF73C4233 /* libPods-TechProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TechProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +211,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B79CE7A200F541700B704E9 /* CoreData.framework in Frameworks */,
 				0B12035B2004680E00E1AA79 /* WebKit.framework in Frameworks */,
 				0B1202D520038EC300E1AA79 /* libiconv.tbd in Frameworks */,
 				0B1202D320038EB900E1AA79 /* libiconv.2.tbd in Frameworks */,
@@ -222,8 +259,8 @@
 		0B1202D620039F4300E1AA79 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0B79CE75200F508C00B704E9 /* initial_data_project.xls */,
 				0BA5C21D2004E66900DE6F82 /* animate */,
-				0BFD23AA2004C88D00F9AFC0 /* test.xls */,
 				0B12029F2003802400E1AA79 /* LaunchScreen.storyboard */,
 				0B12029A2003802400E1AA79 /* TechProject.xcdatamodeld */,
 				0B1202A32003802400E1AA79 /* main.m */,
@@ -231,9 +268,46 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		0B1F37952010B35900C24364 /* NoData */ = {
+			isa = PBXGroup;
+			children = (
+				0B1F37962010B36700C24364 /* TPNoDataView.h */,
+				0B1F37972010B36700C24364 /* TPNoDataView.m */,
+			);
+			path = NoData;
+			sourceTree = "<group>";
+		};
+		0B437C102010BD6800048C37 /* Snow */ = {
+			isa = PBXGroup;
+			children = (
+				0B437C112010BD7300048C37 /* TPSnowView.h */,
+				0B437C122010BD7300048C37 /* TPSnowView.m */,
+			);
+			path = Snow;
+			sourceTree = "<group>";
+		};
+		0B79CE77200F52D000B704E9 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				0B79CE78200F52F000B704E9 /* TPEncodeAndDecoded.h */,
+				0B79CE88200F76E400B704E9 /* TPUtil.h */,
+				0B79CE89200F76E400B704E9 /* TPUtil.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		0B79CE7B200F579D00B704E9 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		0BA5C21D2004E66900DE6F82 /* animate */ = {
 			isa = PBXGroup;
 			children = (
+				0B437C1A2011F72000048C37 /* down.json */,
+				0BC285E9200CAF7300B77B69 /* like.json */,
 				0BA5C23F2004F2FE00DE6F82 /* emoji_wink.json */,
 				0BA5C23E2004F2FE00DE6F82 /* empty_status.json */,
 				0BA5C21E2004E66900DE6F82 /* loading.json */,
@@ -256,6 +330,8 @@
 		0BA5C2672006080800DE6F82 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				0B437C102010BD6800048C37 /* Snow */,
+				0B1F37952010B35900C24364 /* NoData */,
 				0BA5C2682006080800DE6F82 /* Refresh */,
 				0BA5C26B2006080800DE6F82 /* Layout */,
 				0BA5C26E2006080800DE6F82 /* Lable */,
@@ -294,9 +370,9 @@
 			isa = PBXGroup;
 			children = (
 				0BA5C2722006080800DE6F82 /* TPExcelManager.h */,
-				0BA5C2732006080800DE6F82 /* TPProjectDataManager.m */,
 				0BA5C2742006080800DE6F82 /* TPExcelManager.m */,
 				0BA5C2752006080800DE6F82 /* TPProjectDataManager.h */,
+				0BA5C2732006080800DE6F82 /* TPProjectDataManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -344,10 +420,14 @@
 		0BA5C27E2006080800DE6F82 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0BA5C27F2006080800DE6F82 /* TPHomeVCL.m */,
-				0BA5C2802006080800DE6F82 /* TPProjectListVCL.m */,
 				0BA5C2812006080800DE6F82 /* TPHomeVCL.h */,
+				0BA5C27F2006080800DE6F82 /* TPHomeVCL.m */,
 				0BA5C2822006080800DE6F82 /* TPProjectListVCL.h */,
+				0BA5C2802006080800DE6F82 /* TPProjectListVCL.m */,
+				0BC285E0200CAA0D00B77B69 /* TPProjectDetailVCL.h */,
+				0BC285E1200CAA0D00B77B69 /* TPProjectDetailVCL.m */,
+				0B79CE8E2010569400B704E9 /* TPSeachProjectVCL.h */,
+				0B79CE8F2010569400B704E9 /* TPSeachProjectVCL.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -356,9 +436,11 @@
 			isa = PBXGroup;
 			children = (
 				0BA5C2842006080800DE6F82 /* TPHomeModel.h */,
-				0BA5C2852006080800DE6F82 /* TPProjectListModel.m */,
 				0BA5C2862006080800DE6F82 /* TPHomeModel.m */,
 				0BA5C2872006080800DE6F82 /* TPProjectListModel.h */,
+				0BA5C2852006080800DE6F82 /* TPProjectListModel.m */,
+				0BC285EE200CD85900B77B69 /* TPProjectDetailModel.h */,
+				0BC285EF200CD85900B77B69 /* TPProjectDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -366,10 +448,14 @@
 		0BA5C2882006080800DE6F82 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0BA5C2892006080800DE6F82 /* TPProjectListCell.m */,
-				0BA5C28A2006080800DE6F82 /* TPHomeRegionCell.m */,
 				0BA5C28B2006080800DE6F82 /* TPProjectListCell.h */,
+				0BA5C2892006080800DE6F82 /* TPProjectListCell.m */,
 				0BA5C28C2006080800DE6F82 /* TPHomeRegionCell.h */,
+				0BA5C28A2006080800DE6F82 /* TPHomeRegionCell.m */,
+				0BC285EB200CD5C100B77B69 /* TPProjectInfoCell.h */,
+				0BC285EC200CD5C100B77B69 /* TPProjectInfoCell.m */,
+				0BC285F1200CDC8F00B77B69 /* TPProjectDetailNameCell.h */,
+				0BC285F2200CDC8F00B77B69 /* TPProjectDetailNameCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -445,10 +531,10 @@
 		0BA5C2A92006080800DE6F82 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0BA5C2AA2006080800DE6F82 /* TPTabBarVCL.m */,
-				0BA5C2AB2006080800DE6F82 /* TPTabBarAnimator.m */,
 				0BA5C2AC2006080800DE6F82 /* TPTabBarVCL.h */,
+				0BA5C2AA2006080800DE6F82 /* TPTabBarVCL.m */,
 				0BA5C2AD2006080800DE6F82 /* TPTabBarAnimator.h */,
+				0BA5C2AB2006080800DE6F82 /* TPTabBarAnimator.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -483,6 +569,8 @@
 		0BA5C2B52006080800DE6F82 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				0B79CE7B200F579D00B704E9 /* Store */,
+				0B79CE77200F52D000B704E9 /* Util */,
 				0BA5C2B62006080800DE6F82 /* Category */,
 				0BA5C2B92006080800DE6F82 /* ThirdPart */,
 				0BA5C2D52006080800DE6F82 /* Base */,
@@ -495,6 +583,8 @@
 			children = (
 				0BA5C2B72006080800DE6F82 /* UIScrollView+TPRefresh.h */,
 				0BA5C2B82006080800DE6F82 /* UIScrollView+TPRefresh.m */,
+				0BC285E6200CAF3B00B77B69 /* UIButton+TPButton.h */,
+				0BC285E7200CAF3B00B77B69 /* UIButton+TPButton.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -582,6 +672,7 @@
 		63B1142491CC6A022B4C0243 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B79CE79200F541700B704E9 /* CoreData.framework */,
 				0B12035A2004680D00E1AA79 /* WebKit.framework */,
 				0B1202D420038EC300E1AA79 /* libiconv.tbd */,
 				0B1202D220038EB900E1AA79 /* libiconv.2.tbd */,
@@ -663,9 +754,11 @@
 				0BA5C2412004F2FE00DE6F82 /* emoji_wink.json in Resources */,
 				0B1202A12003802400E1AA79 /* LaunchScreen.storyboard in Resources */,
 				0BA5C2402004F2FE00DE6F82 /* empty_status.json in Resources */,
-				0BFD23AC2004C88D00F9AFC0 /* test.xls in Resources */,
 				0B12029E2003802400E1AA79 /* Assets.xcassets in Resources */,
 				0B1202992003802400E1AA79 /* Main.storyboard in Resources */,
+				0BC285EA200CAF7300B77B69 /* like.json in Resources */,
+				0B79CE76200F508C00B704E9 /* initial_data_project.xls in Resources */,
+				0B437C1B2011F72100048C37 /* down.json in Resources */,
 				0BA5C2202004E66900DE6F82 /* loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -730,38 +823,47 @@
 				0BA5C2F42006080800DE6F82 /* TPClientVCL.m in Sources */,
 				0BA5C2FB2006080800DE6F82 /* xls.c in Sources */,
 				0BA5C2DD2006080800DE6F82 /* TPProjectDataManager.m in Sources */,
+				0BC285ED200CD5C100B77B69 /* TPProjectInfoCell.m in Sources */,
 				0BA5C2F52006080800DE6F82 /* TPClientModel.m in Sources */,
 				0BA5C3002006080800DE6F82 /* TPBaseModel.m in Sources */,
 				0BA5C2E12006080800DE6F82 /* TPHomeVCL.m in Sources */,
 				0BA5C2FE2006080800DE6F82 /* xls2csv.c in Sources */,
+				0BC285E8200CAF3B00B77B69 /* UIButton+TPButton.m in Sources */,
 				0BA5C2F32006080800DE6F82 /* TPTabBarAnimator.m in Sources */,
 				0B1202A42003802400E1AA79 /* main.m in Sources */,
 				0BA5C2ED2006080800DE6F82 /* TPNoticeModel.m in Sources */,
 				0BA5C2F72006080800DE6F82 /* main11.cpp in Sources */,
 				0BA5C2E32006080800DE6F82 /* TPProjectListModel.m in Sources */,
+				0B79CE8A200F76E400B704E9 /* TPUtil.m in Sources */,
 				0BA5C2E52006080800DE6F82 /* TPProjectListCell.m in Sources */,
 				0BA5C2DE2006080800DE6F82 /* TPExcelManager.m in Sources */,
 				0BA5C3012006080800DE6F82 /* TPBaseViewController.m in Sources */,
 				0BA5C2E92006080800DE6F82 /* TPNoticeDetailVCL.m in Sources */,
 				0BA5C2FF2006080800DE6F82 /* getopt.c in Sources */,
 				0B1202932003802400E1AA79 /* AppDelegate.m in Sources */,
+				0B1F37982010B36700C24364 /* TPNoDataView.m in Sources */,
 				0BA5C2DC2006080800DE6F82 /* TPTopLeftLabel.m in Sources */,
 				0BA5C2EA2006080800DE6F82 /* TPNoticeListVCL.m in Sources */,
 				0BA5C2E72006080800DE6F82 /* TPLaunchVCL.m in Sources */,
 				0BA5C2EC2006080800DE6F82 /* TPNoticeListModel.m in Sources */,
 				0BA5C2E82006080800DE6F82 /* TPNoticeVCL.m in Sources */,
 				0BA5C2F12006080800DE6F82 /* TPNoticeCategoryCell.m in Sources */,
+				0BC285E2200CAA0D00B77B69 /* TPProjectDetailVCL.m in Sources */,
 				0BA5C2F22006080800DE6F82 /* TPTabBarVCL.m in Sources */,
 				0BA5C2DF2006080800DE6F82 /* TPProjectModel.m in Sources */,
 				0BA5C2FA2006080800DE6F82 /* DHcell.m in Sources */,
 				0BA5C2E22006080800DE6F82 /* TPProjectListVCL.m in Sources */,
+				0B79CE902010569400B704E9 /* TPSeachProjectVCL.m in Sources */,
+				0BC285F0200CD85900B77B69 /* TPProjectDetailModel.m in Sources */,
 				0BA5C2F82006080800DE6F82 /* XlsReader.cpp in Sources */,
+				0BC285F3200CDC8F00B77B69 /* TPProjectDetailNameCell.m in Sources */,
 				0BA5C2FD2006080800DE6F82 /* ole.c in Sources */,
 				0BA5C2DA2006080800DE6F82 /* TPRefreshHeaderView.m in Sources */,
 				0BA5C2EF2006080800DE6F82 /* TPNoticeCategoryItem.m in Sources */,
 				0BA5C2F62006080800DE6F82 /* UIScrollView+TPRefresh.m in Sources */,
 				0BA5C2F92006080800DE6F82 /* DHxlsReaderIOS.m in Sources */,
 				0BA5C2FC2006080800DE6F82 /* xlstool.c in Sources */,
+				0B437C132010BD7300048C37 /* TPSnowView.m in Sources */,
 				0BA5C2EE2006080800DE6F82 /* TPNoticeService.m in Sources */,
 				0BA5C2EB2006080800DE6F82 /* TPNoticeListItem.m in Sources */,
 				0BA5C2E42006080800DE6F82 /* TPHomeModel.m in Sources */,
@@ -778,6 +880,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0B1202982003802400E1AA79 /* Base */,
+				0B79CE92201073F700B704E9 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -786,6 +889,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0B1202A02003802400E1AA79 /* Base */,
+				0B79CE91201073F700B704E9 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -797,6 +901,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -852,6 +957,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -902,7 +1008,7 @@
 			baseConfigurationReference = 4B8FAF9D1DFC2C6ADA2540E9 /* Pods-TechProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MSPQ3852F6;
 				INFOPLIST_FILE = TechProject/Info.plist;
@@ -910,6 +1016,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhengjiacheng.TechProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -919,7 +1026,7 @@
 			baseConfigurationReference = A23819E4BDAE679A1E43A265 /* Pods-TechProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MSPQ3852F6;
 				INFOPLIST_FILE = TechProject/Info.plist;
@@ -927,6 +1034,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhengjiacheng.TechProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

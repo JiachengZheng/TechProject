@@ -15,4 +15,8 @@
 - (void)showLoading;
 
 - (void)hideLoading;
+
+- (void)showNoDataView;
+
+- (void)hideNoDataView;
 @end

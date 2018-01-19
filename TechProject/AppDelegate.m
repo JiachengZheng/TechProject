@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "TPExcelManager.h"
+#import <MagicalRecord/MagicalRecord.h>
+#import "TPProjectDataManager.h"
+#import "TPUtil.h"
 @interface AppDelegate ()
 
 @end
@@ -16,6 +19,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [TPUtil cleanInboxFiles];
+    [[TPProjectDataManager shareInstance] loadData];
     // Override point for customization after application launch.
     return YES;
 }
@@ -83,15 +88,23 @@
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    NSString *surl = [url absoluteString];
-    if ([surl hasPrefix:@"file://"]){
-        surl = [surl substringFromIndex:7];
-        [[TPExcelManager shareInstance]readExcelContent:surl];
-    }
+    [self handleOpenExcelFile:url];
     return YES;
 }
 
-
+- (BOOL)handleOpenExcelFile:(NSURL *)url{
+    NSString *surl = [url absoluteString];
+    if ([surl hasPrefix:@"file://"]){
+        surl = [surl substringFromIndex:7];
+        NSString *name = [surl lastPathComponent];
+        if ([name hasPrefix:kTPProjectAddFileName]) {
+            [[TPProjectDataManager shareInstance]addProjectFromExcel:surl];
+        }else{
+            [TPUtil showAlert:@"文件名称不符合规范"];
+        }
+    }
+    return YES;
+}
 #pragma mark - Core Data Saving support
 
 - (void)saveContext {

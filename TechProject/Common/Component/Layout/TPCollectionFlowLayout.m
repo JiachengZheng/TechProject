@@ -46,11 +46,13 @@
         
         // 根据间距值 计算 cell的缩放比例
         // 间距越大，cell离屏幕中心点越远，那么缩放的scale值就小
-        CGFloat scale = 1 - space / self.collectionView.frame.size.height+0.1;
+        CGFloat scale = 1 - space / self.collectionView.frame.size.height+0.08;
         if (scale <= 1) {
             scale = 1;
         }
-        attrs.transform = CGAffineTransformMakeScale(scale, scale);
+        if (self.collectionView.isDragging) {
+            attrs.transform = CGAffineTransformMakeScale(scale, scale);
+        }
     }
     
     return curArray;

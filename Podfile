@@ -10,7 +10,6 @@ target 'TechProject' do
   pod 'KVOController'
   pod 'IQKeyboardManager'
   pod 'YYCategories'
-  pod 'pop'
   pod 'lottie-ios'
   pod 'AFNetworking'
 end

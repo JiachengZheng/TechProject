@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TechProject/Core/Store/TPStoreModel+CoreDataProperties.h">
+   </FileRef>
+   <FileRef
+      location = "group:TechProject/Core/Store/TPStoreModel+CoreDataClass.h">
+   </FileRef>
+   <FileRef
+      location = "group:TechProject/Core/Store/TPStoreModel+CoreDataClass.m">
+   </FileRef>
+   <FileRef
+      location = "group:TechProject/Core/Store/TPStoreModel+CoreDataProperties.m">
+   </FileRef>
+   <FileRef
       location = "group:TechProject.xcodeproj">
    </FileRef>
    <FileRef

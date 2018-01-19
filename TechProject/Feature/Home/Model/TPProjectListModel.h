@@ -10,6 +10,7 @@
 
 @interface TPProjectListItem: NSObject
 @property (nonatomic, copy) NSString *text;
+@property (nonatomic, copy) NSString *pId;
 @end
 
 @interface TPProjectListModel : TPBaseModel

@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 extern NSString *const kTPDidReadExcelContentNotification;
-
+extern NSString *const kTPProjectAddFileName;
+extern NSString *const kTPInitialProjectFileName;
 @interface TPExcelManager : NSObject
 
 + (instancetype)shareInstance;

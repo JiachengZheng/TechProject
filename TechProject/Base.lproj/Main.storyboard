@@ -78,8 +78,13 @@
                                                     <rect key="frame" x="12" y="10" width="348" height="88"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
+                                                        <view contentMode="scaleToFill" misplaced="YES" id="Oe6-Yp-es2">
+                                                            <rect key="frame" x="0.0" y="0.0" width="5" height="88"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wqr-pb-wOb" customClass="TPTopLeftLabel">
-                                                            <rect key="frame" x="8" y="10" width="326" height="58"/>
+                                                            <rect key="frame" x="12" y="12" width="323" height="58"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" red="0.26244581150000001" green="0.26244581150000001" blue="0.26244581150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -100,6 +105,7 @@
                                         <connections>
                                             <outlet property="bgView" destination="8wz-gB-EXJ" id="WXG-uw-8y1"/>
                                             <outlet property="dateLabel" destination="ZQk-qE-GXk" id="gH4-4C-yJO"/>
+                                            <outlet property="leftView" destination="Oe6-Yp-es2" id="ejk-rW-AYV"/>
                                             <outlet property="titleLabel" destination="Wqr-pb-wOb" id="ONs-qa-LMK"/>
                                         </connections>
                                     </tableViewCell>
@@ -134,6 +140,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m6E-Rl-zCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="371" y="1173"/>
+        </scene>
+        <!--Seach ProjectVCL-->
+        <scene sceneID="3md-Fe-QKI">
+            <objects>
+                <viewController storyboardIdentifier="TPSeachProjectVCL" id="73K-dp-pZc" customClass="TPSeachProjectVCL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xlO-YY-kkT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LW5-6P-X5r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="369" y="-1091"/>
         </scene>
         <!--项目-->
         <scene sceneID="gaN-L1-h5E">
@@ -206,17 +226,30 @@
                                             <rect key="frame" x="0.0" y="0.0" width="371" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" id="6zF-wE-VJU">
-                                                    <rect key="frame" x="7" y="8" width="354" height="103"/>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" id="6zF-wE-VJU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="371" height="120"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
+                                                        <view contentMode="scaleToFill" misplaced="YES" id="XiA-LG-NPZ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="5" height="120"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="gvB-ID-e1h" customClass="TPTopLeftLabel">
-                                                            <rect key="frame" x="0.0" y="4" width="354" height="87"/>
+                                                            <rect key="frame" x="15" y="12" width="338" height="91"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <color key="textColor" red="0.26244581150000001" green="0.26244581150000001" blue="0.26244581150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RwQ-GE-UPb">
+                                                            <rect key="frame" x="338" y="89" width="20" height="20"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                                            <state key="normal" image="like"/>
+                                                            <connections>
+                                                                <action selector="touchLikeButton:" destination="bhz-jb-HR9" eventType="touchUpInside" id="aPd-Ao-xpw"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
@@ -224,6 +257,8 @@
                                         </view>
                                         <connections>
                                             <outlet property="bgView" destination="6zF-wE-VJU" id="fFO-To-6GP"/>
+                                            <outlet property="leftView" destination="XiA-LG-NPZ" id="MKz-RD-d5t"/>
+                                            <outlet property="likeButton" destination="RwQ-GE-UPb" id="3j1-UC-SDa"/>
                                             <outlet property="nameLabel" destination="gvB-ID-e1h" id="W4w-3p-OES"/>
                                         </connections>
                                     </collectionViewCell>
@@ -243,6 +278,93 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYm-WN-77N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="828.5" y="-337.5"/>
+        </scene>
+        <!--Project DetailVCL-->
+        <scene sceneID="E9O-fR-Fij">
+            <objects>
+                <viewController storyboardIdentifier="TPProjectDetailVCL" id="TeV-dt-IRf" customClass="TPProjectDetailVCL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bWd-Pb-xdy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="amG-Cw-EeQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TPProjectInfoCell" rowHeight="156" id="Or0-o7-3Me" customClass="TPProjectInfoCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="156"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Or0-o7-3Me" id="NQP-yp-I0t">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="155.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Bd4-ws-otJ">
+                                                    <rect key="frame" x="20" y="13" width="347" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" red="0.23137254901960785" green="0.70196078431372544" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" id="iFm-UT-LLa">
+                                                    <rect key="frame" x="30" y="42" width="330" height="103"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <color key="textColor" red="0.27058823529411763" green="0.27058823529411763" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES" shipmentTrackingNumber="YES"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="infoTextLabel" destination="iFm-UT-LLa" id="EHf-KU-ire"/>
+                                            <outlet property="infoTitle" destination="Bd4-ws-otJ" id="Nra-nG-KRB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TPProjectDetailNameCell" rowHeight="260" id="LJo-mL-7eU" customClass="TPProjectDetailNameCell">
+                                        <rect key="frame" x="0.0" y="184" width="375" height="260"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LJo-mL-7eU" id="NSh-vY-2ta">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="259.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg_detail" id="A82-64-jFo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Cow-74-Ix6">
+                                                    <rect key="frame" x="34" y="73" width="341" height="134"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="Cow-74-Ix6" id="449-au-rnu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="TeV-dt-IRf" id="o9B-FR-R2j"/>
+                                    <outlet property="delegate" destination="TeV-dt-IRf" id="dFq-a2-zby"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="amG-Cw-EeQ" id="f7C-2f-Qtr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y3D-TS-KoL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1238.5" y="-334.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZI7-pc-STH">
@@ -268,7 +390,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V60-Hx-obY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="nhI-rJ-5sd" kind="relationship" relationship="viewControllers" id="sjv-Ka-wNa"/>
@@ -282,6 +403,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bg_detail" width="2140" height="960"/>
+        <image name="like" width="64" height="64"/>
         <image name="tab_client" width="27" height="27"/>
         <image name="tab_home" width="27" height="27"/>
         <image name="tab_notice" width="27" height="27"/>

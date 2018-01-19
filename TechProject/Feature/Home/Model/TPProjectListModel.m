@@ -17,6 +17,7 @@
         if ([model.region.regionId isEqualToString:rId]) {
             TPProjectListItem *item = [TPProjectListItem new];
             item.text = model.name;
+            item.pId = model.pId;
             [arr addObject:item];
         }
     }

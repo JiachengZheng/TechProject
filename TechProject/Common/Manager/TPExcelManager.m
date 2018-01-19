@@ -10,7 +10,11 @@
 #import "DHxlsReaderIOS.h"
 #import "TPProjectModel.h"
 #import "TPCommonDefine.h"
+#import "TPUtil.h"
+#import "TPProjectDataManager.h"
 NSString *const kTPDidReadExcelContentNotification = @"TPDidReadExcelContentNotification";
+NSString *const kTPProjectAddFileName = @"add_project";
+NSString *const kTPInitialProjectFileName = @"initial_data_project.xls";
 @interface TPExcelManager ()
 
 @end
@@ -29,29 +33,27 @@ NSString *const kTPDidReadExcelContentNotification = @"TPDidReadExcelContentNoti
 - (NSDictionary *)readExcelContent:(NSString *)path;{
     DHxlsReader *reader = [DHxlsReader xlsReaderFromFile:path];
     if (!reader) {
-        [self showAlert];
+        [TPUtil showAlert:@"无法该读取文件"];
         return nil;
     }
-    NSString *name = path.lastPathComponent;
-    if ([name isEqualToString:@"test.xls"]) {
+    NSString *name = [path lastPathComponent];
+    if ([name hasPrefix:kTPInitialProjectFileName] || [name hasPrefix:kTPProjectAddFileName]) {
         return [self readProjectsContent:reader];
     }
+    [TPUtil showAlert:@"暂时无法处理该文件"];
     return nil;
 }
 
-- (NSArray *)readProjectsContent:(DHxlsReader *)reader{
-#if 0
-    [reader startIterator:0];
-    while(YES) {
-        DHcell *cell = [reader nextCell];
-        if(cell.type == cellBlank) break;
-        text = [text stringByAppendingFormat:@"\n%@\n", [cell dump]];
-    }
-#else
+- (NSDictionary *)readProjectsContent:(DHxlsReader *)reader{
+    NSMutableArray *rArr = [NSMutableArray arrayWithArray:[TPProjectDataManager shareInstance].regionArr];
+    [rArr addObjectsFromArray:[self readRegionInfo:reader]];
+    NSArray *projectArr = [self readProjectInfo:reader regionArr:rArr];
+    return @{@"region": rArr, @"project": projectArr};
+}
+
+- (NSArray *)readTypeInfo:(DHxlsReader *)reader{
+    //读取项目子标题
     NSMutableArray *typeArr = [NSMutableArray array];
-    NSMutableArray <TPProjectRegionModel *>*regionArr = [NSMutableArray array];
-    NSMutableArray *projectArr = [NSMutableArray array];
-    
     NSInteger col = 2;
     while (YES) {
         DHcell *cell = [reader cellInWorkSheetIndex:0 row:2 col:col];
@@ -59,19 +61,25 @@ NSString *const kTPDidReadExcelContentNotification = @"TPDidReadExcelContentNoti
         [typeArr addObject:cell.str];
         col++;
     }
-    
-    //有合并单元格的情况，逻辑是判断两个中间相差如果大于等于100 ，就停止
-    NSInteger row = 3;
-    NSInteger maxGap = 100;
+    return typeArr;
+}
+
+//读取地区信息
+- (NSArray *)readRegionInfo:(DHxlsReader *)reader{
+    NSMutableArray <TPProjectRegionModel *>*regionArr = [NSMutableArray array];
+    NSInteger maxGap = 100;//有合并单元格的情况，判断两个中间相差如果大于等于100 ，就停止
+    NSInteger row = 3; //从第三行开始读取
     NSInteger curGap = 0;
-    NSInteger regionId = 1;
     while (YES) {
         DHcell *cell = [reader cellInWorkSheetIndex:0 row:row col:1];
         if (cell.str) {
-            TPProjectRegionModel *region = [TPProjectRegionModel new];
-            region.name = cell.str;
-            region.regionId = @(regionId++).stringValue;
-            [regionArr addObject:region];
+            TPProjectRegionModel *oldRegion = [self alreadyContainRegionInfo:cell.str];
+            if (!oldRegion) {
+                TPProjectRegionModel *region = [TPProjectRegionModel new];
+                region.name = cell.str;
+                region.regionId = [TPUtil generateUUID];
+                [regionArr addObject:region];
+            }
             curGap = 0;
         }else{
             curGap ++;
@@ -81,9 +89,36 @@ NSString *const kTPDidReadExcelContentNotification = @"TPDidReadExcelContentNoti
         }
         row++;
     }
+    return regionArr;
+}
+
+- (TPProjectRegionModel *)alreadyContainRegionInfo:(NSString *)name{
+    NSArray *rArr = [TPProjectDataManager shareInstance].regionArr;
+    for (TPProjectRegionModel *model in rArr) {
+        if ([model.name isEqualToString:name]) {
+            return model;
+        }
+    }
+    return nil;
+}
+
+- (BOOL)alreadyContainProject:(NSString *)name{
+    NSArray *pArr = [TPProjectDataManager shareInstance].projectArr;
+    for (TPProjectModel *model in pArr) {
+        if ([model.name isEqualToString:name]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+- (NSArray *)readProjectInfo:(DHxlsReader *)reader regionArr:(NSArray *)regionArr{
+    NSArray *typeArr = [self readTypeInfo:reader];
     
-    row = 3;
-    col = 2;
+    //读取项目信息
+    NSMutableArray *projectArr = [NSMutableArray array];
+    NSInteger row = 3;
+    NSInteger col = 2;
     NSInteger typeIndex = 0;
     TPProjectRegionModel *curRegion = regionArr[0];
     NSString *curKey = typeArr[typeIndex];
@@ -113,10 +148,12 @@ NSString *const kTPDidReadExcelContentNotification = @"TPDidReadExcelContentNoti
         if (col == 2 && TPEmptyString(value)) {
             break;
         }
-
+        
         if(cell.type == cellBlank || typeIndex == typeArr.count-1){
-            [projectArr addObject:project];
-            project.pId = @(projectArr.count).stringValue;
+            if (![self alreadyContainProject:project.name]) {
+                [projectArr addObject:project];
+            }
+            project.pId = [TPUtil generateUUID];
             project = [TPProjectModel new];
             row ++;
             typeIndex = 0;
@@ -130,9 +167,20 @@ NSString *const kTPDidReadExcelContentNotification = @"TPDidReadExcelContentNoti
             curKey = typeArr[typeIndex];
         }
     }
-#endif
-    return @{@"region": regionArr, @"project": projectArr};
+    return projectArr;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 - (NSString *)excelDescription:(NSString *)path{
     DHxlsReader *reader = [DHxlsReader xlsReaderFromFile:path];
@@ -154,12 +202,5 @@ NSString *const kTPDidReadExcelContentNotification = @"TPDidReadExcelContentNoti
     return text;
 }
 
-- (void)showAlert{
-    UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"导入的文件格式必须为xls" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *confirm = [UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 
-    }];
-    [alertController addAction:confirm];
-    [[UIApplication sharedApplication].delegate.window.rootViewController presentViewController:alertController animated:YES completion:nil];
-}
 @end
