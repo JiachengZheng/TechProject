@@ -20,6 +20,7 @@
 - (void)awakeFromNib {
     //EB7A02
     [super awakeFromNib];
+    [CATransaction begin];
     self.infoTitle.textColor = [UIColor colorWithHexString:@"333333"];
     self.dotLayer = [CALayer layer];
     self.dotLayer.frame = CGRectMake(0, 0, 5, 5);
@@ -29,6 +30,7 @@
     self.dotLayer.centerY = self.infoTitle.centerY;
     self.dotLayer.width = 4;
     [self.contentView.layer addSublayer:self.dotLayer];
+    [CATransaction commit];
     // Initialization code
 }
 

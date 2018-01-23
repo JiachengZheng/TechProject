@@ -17,8 +17,25 @@
 		0B1202D520038EC300E1AA79 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1202D420038EC300E1AA79 /* libiconv.tbd */; };
 		0B12035B2004680E00E1AA79 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B12035A2004680D00E1AA79 /* WebKit.framework */; };
 		0B1F37982010B36700C24364 /* TPNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1F37972010B36700C24364 /* TPNoDataView.m */; };
+		0B257C202015F71C0086327F /* TPClientDetailVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B257C1F2015F71C0086327F /* TPClientDetailVCL.m */; };
+		0B257C232015F7610086327F /* TPClientNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B257C222015F7610086327F /* TPClientNameCell.m */; };
+		0B257C262015F76E0086327F /* TPClientInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B257C252015F76E0086327F /* TPClientInfoCell.m */; };
+		0B257C292015F7F80086327F /* TPClientDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B257C282015F7F80086327F /* TPClientDetailModel.m */; };
+		0B257C2C201613830086327F /* TPClientInfoEditVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B257C2B201613830086327F /* TPClientInfoEditVCL.m */; };
+		0B257C3120171B3B0086327F /* TPClientSearchVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B257C3020171B3B0086327F /* TPClientSearchVCL.m */; };
+		0B257C3B20172C580086327F /* JCPageContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B257C3420172C580086327F /* JCPageContoller.m */; };
+		0B257C3C20172C580086327F /* JCPageSlideBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B257C3720172C580086327F /* JCPageSlideBar.m */; };
+		0B257C3D20172C580086327F /* JCPageSlideBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B257C3920172C580086327F /* JCPageSlideBarCell.m */; };
+		0B257C4420172E0C0086327F /* TPFavoriteVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B257C4320172E0C0086327F /* TPFavoriteVCL.m */; };
+		0B257C4720172EED0086327F /* TPFavoriteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B257C4620172EED0086327F /* TPFavoriteModel.m */; };
+		0B257C4A20172F3F0086327F /* TPBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B257C4920172F3F0086327F /* TPBarItem.m */; };
 		0B437C132010BD7300048C37 /* TPSnowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B437C122010BD7300048C37 /* TPSnowView.m */; };
 		0B437C1B2011F72100048C37 /* down.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B437C1A2011F72000048C37 /* down.json */; };
+		0B437C232015C82B00048C37 /* TPClientListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B437C222015C82B00048C37 /* TPClientListCell.m */; };
+		0B437C252015C92300048C37 /* initial_data_client.xls in Resources */ = {isa = PBXBuildFile; fileRef = 0B437C242015C92300048C37 /* initial_data_client.xls */; };
+		0B437C282015C9DF00048C37 /* TPProjectRegionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B437C272015C9DF00048C37 /* TPProjectRegionModel.m */; };
+		0B437C2B2015CA4800048C37 /* TPClientModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B437C2A2015CA4800048C37 /* TPClientModel.m */; };
+		0B437C2E2015CB4600048C37 /* TPClientListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B437C2D2015CB4600048C37 /* TPClientListModel.m */; };
 		0B79CE76200F508C00B704E9 /* initial_data_project.xls in Resources */ = {isa = PBXBuildFile; fileRef = 0B79CE75200F508C00B704E9 /* initial_data_project.xls */; };
 		0B79CE7A200F541700B704E9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B79CE79200F541700B704E9 /* CoreData.framework */; };
 		0B79CE8A200F76E400B704E9 /* TPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B79CE89200F76E400B704E9 /* TPUtil.m */; };
@@ -53,7 +70,6 @@
 		0BA5C2F22006080800DE6F82 /* TPTabBarVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2AA2006080800DE6F82 /* TPTabBarVCL.m */; };
 		0BA5C2F32006080800DE6F82 /* TPTabBarAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2AB2006080800DE6F82 /* TPTabBarAnimator.m */; };
 		0BA5C2F42006080800DE6F82 /* TPClientVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2B12006080800DE6F82 /* TPClientVCL.m */; };
-		0BA5C2F52006080800DE6F82 /* TPClientModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2B42006080800DE6F82 /* TPClientModel.m */; };
 		0BA5C2F62006080800DE6F82 /* UIScrollView+TPRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2B82006080800DE6F82 /* UIScrollView+TPRefresh.m */; };
 		0BA5C2F72006080800DE6F82 /* main11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2BC2006080800DE6F82 /* main11.cpp */; };
 		0BA5C2F82006080800DE6F82 /* XlsReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5C2BE2006080800DE6F82 /* XlsReader.cpp */; };
@@ -90,9 +106,42 @@
 		0B12035A2004680D00E1AA79 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		0B1F37962010B36700C24364 /* TPNoDataView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPNoDataView.h; sourceTree = "<group>"; };
 		0B1F37972010B36700C24364 /* TPNoDataView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPNoDataView.m; sourceTree = "<group>"; };
+		0B257C1E2015F71C0086327F /* TPClientDetailVCL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPClientDetailVCL.h; sourceTree = "<group>"; };
+		0B257C1F2015F71C0086327F /* TPClientDetailVCL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPClientDetailVCL.m; sourceTree = "<group>"; };
+		0B257C212015F7610086327F /* TPClientNameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPClientNameCell.h; sourceTree = "<group>"; };
+		0B257C222015F7610086327F /* TPClientNameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPClientNameCell.m; sourceTree = "<group>"; };
+		0B257C242015F76E0086327F /* TPClientInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPClientInfoCell.h; sourceTree = "<group>"; };
+		0B257C252015F76E0086327F /* TPClientInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPClientInfoCell.m; sourceTree = "<group>"; };
+		0B257C272015F7F80086327F /* TPClientDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPClientDetailModel.h; sourceTree = "<group>"; };
+		0B257C282015F7F80086327F /* TPClientDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPClientDetailModel.m; sourceTree = "<group>"; };
+		0B257C2A201613830086327F /* TPClientInfoEditVCL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPClientInfoEditVCL.h; sourceTree = "<group>"; };
+		0B257C2B201613830086327F /* TPClientInfoEditVCL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPClientInfoEditVCL.m; sourceTree = "<group>"; };
+		0B257C2F20171B3B0086327F /* TPClientSearchVCL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPClientSearchVCL.h; sourceTree = "<group>"; };
+		0B257C3020171B3B0086327F /* TPClientSearchVCL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPClientSearchVCL.m; sourceTree = "<group>"; };
+		0B257C3420172C580086327F /* JCPageContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCPageContoller.m; sourceTree = "<group>"; };
+		0B257C3520172C580086327F /* JCPageContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCPageContoller.h; sourceTree = "<group>"; };
+		0B257C3720172C580086327F /* JCPageSlideBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCPageSlideBar.m; sourceTree = "<group>"; };
+		0B257C3820172C580086327F /* JCPageSlideBarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCPageSlideBarCell.h; sourceTree = "<group>"; };
+		0B257C3920172C580086327F /* JCPageSlideBarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCPageSlideBarCell.m; sourceTree = "<group>"; };
+		0B257C3A20172C580086327F /* JCPageSlideBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCPageSlideBar.h; sourceTree = "<group>"; };
+		0B257C4220172E0C0086327F /* TPFavoriteVCL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPFavoriteVCL.h; sourceTree = "<group>"; };
+		0B257C4320172E0C0086327F /* TPFavoriteVCL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPFavoriteVCL.m; sourceTree = "<group>"; };
+		0B257C4520172EED0086327F /* TPFavoriteModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPFavoriteModel.h; sourceTree = "<group>"; };
+		0B257C4620172EED0086327F /* TPFavoriteModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPFavoriteModel.m; sourceTree = "<group>"; };
+		0B257C4820172F3F0086327F /* TPBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPBarItem.h; sourceTree = "<group>"; };
+		0B257C4920172F3F0086327F /* TPBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPBarItem.m; sourceTree = "<group>"; };
 		0B437C112010BD7300048C37 /* TPSnowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPSnowView.h; sourceTree = "<group>"; };
 		0B437C122010BD7300048C37 /* TPSnowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPSnowView.m; sourceTree = "<group>"; };
 		0B437C1A2011F72000048C37 /* down.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = down.json; sourceTree = "<group>"; };
+		0B437C212015C82B00048C37 /* TPClientListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPClientListCell.h; sourceTree = "<group>"; };
+		0B437C222015C82B00048C37 /* TPClientListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPClientListCell.m; sourceTree = "<group>"; };
+		0B437C242015C92300048C37 /* initial_data_client.xls */ = {isa = PBXFileReference; lastKnownFileType = file; path = initial_data_client.xls; sourceTree = "<group>"; };
+		0B437C262015C9DF00048C37 /* TPProjectRegionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPProjectRegionModel.h; sourceTree = "<group>"; };
+		0B437C272015C9DF00048C37 /* TPProjectRegionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPProjectRegionModel.m; sourceTree = "<group>"; };
+		0B437C292015CA4800048C37 /* TPClientModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPClientModel.h; sourceTree = "<group>"; };
+		0B437C2A2015CA4800048C37 /* TPClientModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPClientModel.m; sourceTree = "<group>"; };
+		0B437C2C2015CB4600048C37 /* TPClientListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPClientListModel.h; sourceTree = "<group>"; };
+		0B437C2D2015CB4600048C37 /* TPClientListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPClientListModel.m; sourceTree = "<group>"; };
 		0B79CE75200F508C00B704E9 /* initial_data_project.xls */ = {isa = PBXFileReference; lastKnownFileType = file; path = initial_data_project.xls; sourceTree = "<group>"; };
 		0B79CE78200F52F000B704E9 /* TPEncodeAndDecoded.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPEncodeAndDecoded.h; sourceTree = "<group>"; };
 		0B79CE79200F541700B704E9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -160,8 +209,6 @@
 		0BA5C2AD2006080800DE6F82 /* TPTabBarAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTabBarAnimator.h; sourceTree = "<group>"; };
 		0BA5C2B02006080800DE6F82 /* TPClientVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPClientVCL.h; sourceTree = "<group>"; };
 		0BA5C2B12006080800DE6F82 /* TPClientVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPClientVCL.m; sourceTree = "<group>"; };
-		0BA5C2B32006080800DE6F82 /* TPClientModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPClientModel.h; sourceTree = "<group>"; };
-		0BA5C2B42006080800DE6F82 /* TPClientModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPClientModel.m; sourceTree = "<group>"; };
 		0BA5C2B72006080800DE6F82 /* UIScrollView+TPRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPRefresh.h"; sourceTree = "<group>"; };
 		0BA5C2B82006080800DE6F82 /* UIScrollView+TPRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPRefresh.m"; sourceTree = "<group>"; };
 		0BA5C2BC2006080800DE6F82 /* main11.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main11.cpp; sourceTree = "<group>"; };
@@ -259,6 +306,7 @@
 		0B1202D620039F4300E1AA79 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0B437C242015C92300048C37 /* initial_data_client.xls */,
 				0B79CE75200F508C00B704E9 /* initial_data_project.xls */,
 				0BA5C21D2004E66900DE6F82 /* animate */,
 				0B12029F2003802400E1AA79 /* LaunchScreen.storyboard */,
@@ -277,6 +325,72 @@
 			path = NoData;
 			sourceTree = "<group>";
 		};
+		0B257C3220172C580086327F /* JCPageController */ = {
+			isa = PBXGroup;
+			children = (
+				0B257C3320172C580086327F /* Controller */,
+				0B257C3620172C580086327F /* View */,
+			);
+			path = JCPageController;
+			sourceTree = "<group>";
+		};
+		0B257C3320172C580086327F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0B257C3420172C580086327F /* JCPageContoller.m */,
+				0B257C3520172C580086327F /* JCPageContoller.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0B257C3620172C580086327F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0B257C3720172C580086327F /* JCPageSlideBar.m */,
+				0B257C3820172C580086327F /* JCPageSlideBarCell.h */,
+				0B257C3920172C580086327F /* JCPageSlideBarCell.m */,
+				0B257C3A20172C580086327F /* JCPageSlideBar.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0B257C3E20172DCF0086327F /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				0B257C4020172E000086327F /* Controller */,
+				0B257C3F20172E000086327F /* Model */,
+				0B257C4120172E000086327F /* View */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		0B257C3F20172E000086327F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B257C4520172EED0086327F /* TPFavoriteModel.h */,
+				0B257C4620172EED0086327F /* TPFavoriteModel.m */,
+				0B257C4820172F3F0086327F /* TPBarItem.h */,
+				0B257C4920172F3F0086327F /* TPBarItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0B257C4020172E000086327F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0B257C4220172E0C0086327F /* TPFavoriteVCL.h */,
+				0B257C4320172E0C0086327F /* TPFavoriteVCL.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0B257C4120172E000086327F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0B437C102010BD6800048C37 /* Snow */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +398,19 @@
 				0B437C122010BD7300048C37 /* TPSnowView.m */,
 			);
 			path = Snow;
+			sourceTree = "<group>";
+		};
+		0B437C202015C81900048C37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0B437C212015C82B00048C37 /* TPClientListCell.h */,
+				0B437C222015C82B00048C37 /* TPClientListCell.m */,
+				0B257C212015F7610086327F /* TPClientNameCell.h */,
+				0B257C222015F7610086327F /* TPClientNameCell.m */,
+				0B257C242015F76E0086327F /* TPClientInfoCell.h */,
+				0B257C252015F76E0086327F /* TPClientInfoCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		0B79CE77200F52D000B704E9 /* Util */ = {
@@ -330,6 +457,7 @@
 		0BA5C2672006080800DE6F82 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				0B257C3220172C580086327F /* JCPageController */,
 				0B437C102010BD6800048C37 /* Snow */,
 				0B1F37952010B35900C24364 /* NoData */,
 				0BA5C2682006080800DE6F82 /* Refresh */,
@@ -382,6 +510,10 @@
 			children = (
 				0BA5C2772006080800DE6F82 /* TPProjectModel.m */,
 				0BA5C2782006080800DE6F82 /* TPProjectModel.h */,
+				0B437C262015C9DF00048C37 /* TPProjectRegionModel.h */,
+				0B437C272015C9DF00048C37 /* TPProjectRegionModel.m */,
+				0B437C292015CA4800048C37 /* TPClientModel.h */,
+				0B437C2A2015CA4800048C37 /* TPClientModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -398,6 +530,7 @@
 		0BA5C27C2006080800DE6F82 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				0B257C3E20172DCF0086327F /* Favorite */,
 				0BA5C27D2006080800DE6F82 /* Home */,
 				0BA5C28D2006080800DE6F82 /* Launch */,
 				0BA5C2902006080800DE6F82 /* Notice */,
@@ -542,6 +675,7 @@
 		0BA5C2AE2006080800DE6F82 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				0B437C202015C81900048C37 /* View */,
 				0BA5C2AF2006080800DE6F82 /* Controller */,
 				0BA5C2B22006080800DE6F82 /* Model */,
 			);
@@ -553,6 +687,12 @@
 			children = (
 				0BA5C2B02006080800DE6F82 /* TPClientVCL.h */,
 				0BA5C2B12006080800DE6F82 /* TPClientVCL.m */,
+				0B257C1E2015F71C0086327F /* TPClientDetailVCL.h */,
+				0B257C1F2015F71C0086327F /* TPClientDetailVCL.m */,
+				0B257C2A201613830086327F /* TPClientInfoEditVCL.h */,
+				0B257C2B201613830086327F /* TPClientInfoEditVCL.m */,
+				0B257C2F20171B3B0086327F /* TPClientSearchVCL.h */,
+				0B257C3020171B3B0086327F /* TPClientSearchVCL.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -560,8 +700,10 @@
 		0BA5C2B22006080800DE6F82 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0BA5C2B32006080800DE6F82 /* TPClientModel.h */,
-				0BA5C2B42006080800DE6F82 /* TPClientModel.m */,
+				0B437C2C2015CB4600048C37 /* TPClientListModel.h */,
+				0B437C2D2015CB4600048C37 /* TPClientListModel.m */,
+				0B257C272015F7F80086327F /* TPClientDetailModel.h */,
+				0B257C282015F7F80086327F /* TPClientDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -758,6 +900,7 @@
 				0B1202992003802400E1AA79 /* Main.storyboard in Resources */,
 				0BC285EA200CAF7300B77B69 /* like.json in Resources */,
 				0B79CE76200F508C00B704E9 /* initial_data_project.xls in Resources */,
+				0B437C252015C92300048C37 /* initial_data_client.xls in Resources */,
 				0B437C1B2011F72100048C37 /* down.json in Resources */,
 				0BA5C2202004E66900DE6F82 /* loading.json in Resources */,
 			);
@@ -818,13 +961,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B257C232015F7610086327F /* TPClientNameCell.m in Sources */,
 				0B12029C2003802400E1AA79 /* TechProject.xcdatamodeld in Sources */,
 				0BA5C2E02006080800DE6F82 /* TPCommonViewHelper.m in Sources */,
 				0BA5C2F42006080800DE6F82 /* TPClientVCL.m in Sources */,
 				0BA5C2FB2006080800DE6F82 /* xls.c in Sources */,
 				0BA5C2DD2006080800DE6F82 /* TPProjectDataManager.m in Sources */,
+				0B257C3B20172C580086327F /* JCPageContoller.m in Sources */,
 				0BC285ED200CD5C100B77B69 /* TPProjectInfoCell.m in Sources */,
-				0BA5C2F52006080800DE6F82 /* TPClientModel.m in Sources */,
 				0BA5C3002006080800DE6F82 /* TPBaseModel.m in Sources */,
 				0BA5C2E12006080800DE6F82 /* TPHomeVCL.m in Sources */,
 				0BA5C2FE2006080800DE6F82 /* xls2csv.c in Sources */,
@@ -835,41 +979,55 @@
 				0BA5C2F72006080800DE6F82 /* main11.cpp in Sources */,
 				0BA5C2E32006080800DE6F82 /* TPProjectListModel.m in Sources */,
 				0B79CE8A200F76E400B704E9 /* TPUtil.m in Sources */,
+				0B437C282015C9DF00048C37 /* TPProjectRegionModel.m in Sources */,
 				0BA5C2E52006080800DE6F82 /* TPProjectListCell.m in Sources */,
 				0BA5C2DE2006080800DE6F82 /* TPExcelManager.m in Sources */,
 				0BA5C3012006080800DE6F82 /* TPBaseViewController.m in Sources */,
 				0BA5C2E92006080800DE6F82 /* TPNoticeDetailVCL.m in Sources */,
 				0BA5C2FF2006080800DE6F82 /* getopt.c in Sources */,
 				0B1202932003802400E1AA79 /* AppDelegate.m in Sources */,
+				0B257C262015F76E0086327F /* TPClientInfoCell.m in Sources */,
 				0B1F37982010B36700C24364 /* TPNoDataView.m in Sources */,
 				0BA5C2DC2006080800DE6F82 /* TPTopLeftLabel.m in Sources */,
+				0B257C4420172E0C0086327F /* TPFavoriteVCL.m in Sources */,
 				0BA5C2EA2006080800DE6F82 /* TPNoticeListVCL.m in Sources */,
 				0BA5C2E72006080800DE6F82 /* TPLaunchVCL.m in Sources */,
 				0BA5C2EC2006080800DE6F82 /* TPNoticeListModel.m in Sources */,
+				0B257C2C201613830086327F /* TPClientInfoEditVCL.m in Sources */,
 				0BA5C2E82006080800DE6F82 /* TPNoticeVCL.m in Sources */,
 				0BA5C2F12006080800DE6F82 /* TPNoticeCategoryCell.m in Sources */,
+				0B257C4720172EED0086327F /* TPFavoriteModel.m in Sources */,
+				0B437C2E2015CB4600048C37 /* TPClientListModel.m in Sources */,
 				0BC285E2200CAA0D00B77B69 /* TPProjectDetailVCL.m in Sources */,
 				0BA5C2F22006080800DE6F82 /* TPTabBarVCL.m in Sources */,
+				0B257C202015F71C0086327F /* TPClientDetailVCL.m in Sources */,
 				0BA5C2DF2006080800DE6F82 /* TPProjectModel.m in Sources */,
 				0BA5C2FA2006080800DE6F82 /* DHcell.m in Sources */,
 				0BA5C2E22006080800DE6F82 /* TPProjectListVCL.m in Sources */,
 				0B79CE902010569400B704E9 /* TPSeachProjectVCL.m in Sources */,
 				0BC285F0200CD85900B77B69 /* TPProjectDetailModel.m in Sources */,
 				0BA5C2F82006080800DE6F82 /* XlsReader.cpp in Sources */,
+				0B257C292015F7F80086327F /* TPClientDetailModel.m in Sources */,
+				0B437C2B2015CA4800048C37 /* TPClientModel.m in Sources */,
 				0BC285F3200CDC8F00B77B69 /* TPProjectDetailNameCell.m in Sources */,
 				0BA5C2FD2006080800DE6F82 /* ole.c in Sources */,
 				0BA5C2DA2006080800DE6F82 /* TPRefreshHeaderView.m in Sources */,
 				0BA5C2EF2006080800DE6F82 /* TPNoticeCategoryItem.m in Sources */,
 				0BA5C2F62006080800DE6F82 /* UIScrollView+TPRefresh.m in Sources */,
+				0B257C4A20172F3F0086327F /* TPBarItem.m in Sources */,
 				0BA5C2F92006080800DE6F82 /* DHxlsReaderIOS.m in Sources */,
+				0B257C3120171B3B0086327F /* TPClientSearchVCL.m in Sources */,
 				0BA5C2FC2006080800DE6F82 /* xlstool.c in Sources */,
 				0B437C132010BD7300048C37 /* TPSnowView.m in Sources */,
 				0BA5C2EE2006080800DE6F82 /* TPNoticeService.m in Sources */,
 				0BA5C2EB2006080800DE6F82 /* TPNoticeListItem.m in Sources */,
 				0BA5C2E42006080800DE6F82 /* TPHomeModel.m in Sources */,
+				0B437C232015C82B00048C37 /* TPClientListCell.m in Sources */,
 				0BA5C2F02006080800DE6F82 /* TPNoticeListCell.m in Sources */,
 				0BA5C2E62006080800DE6F82 /* TPHomeRegionCell.m in Sources */,
 				0BA5C2DB2006080800DE6F82 /* TPCollectionFlowLayout.m in Sources */,
+				0B257C3C20172C580086327F /* JCPageSlideBar.m in Sources */,
+				0B257C3D20172C580086327F /* JCPageSlideBarCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

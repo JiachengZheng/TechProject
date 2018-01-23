@@ -10,7 +10,10 @@
 
 extern NSString *const kTPDidReadExcelContentNotification;
 extern NSString *const kTPProjectAddFileName;
+extern NSString *const kTPClientAddFileName;
 extern NSString *const kTPInitialProjectFileName;
+extern NSString *const kTPInitialClientFileName;
+
 @interface TPExcelManager : NSObject
 
 + (instancetype)shareInstance;

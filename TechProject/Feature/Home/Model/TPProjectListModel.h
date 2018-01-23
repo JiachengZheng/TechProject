@@ -11,8 +11,9 @@
 @interface TPProjectListItem: NSObject
 @property (nonatomic, copy) NSString *text;
 @property (nonatomic, copy) NSString *pId;
+@property (nonatomic, assign) BOOL isFavorite;
 @end
 
 @interface TPProjectListModel : TPBaseModel
-
+@property (nonatomic, assign)BOOL showFavorite;
 @end

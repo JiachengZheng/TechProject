@@ -8,6 +8,7 @@
 
 #import "TPBaseModel.h"
 #import "TPProjectModel.h"
+#import "TPProjectRegionModel.h"
 @interface TPHomeRegionItem: NSObject
 @property (nonatomic, copy)NSString *regionName;
 @property (nonatomic, strong) TPProjectRegionModel *region;

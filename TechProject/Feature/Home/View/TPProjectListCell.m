@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *likeButton;
 @property (weak, nonatomic) IBOutlet UIView *leftView;
 @property (nonatomic, strong)LOTAnimationView *animation;
+@property (nonatomic, strong) TPProjectListItem *item;
 @end
 
 @implementation TPProjectListCell
@@ -37,16 +38,9 @@
     
     self.likeButton.hitTestEdgeInsets = UIEdgeInsetsMake(-20, -20, -40, -40);
     
-    LOTAnimationView *animation = [LOTAnimationView animationNamed:@"like" inBundle:[NSBundle mainBundle]];
-    animation.frame = self.likeButton.frame;
-    animation.contentMode = UIViewContentModeScaleAspectFill;
-    [self.bgView addSubview:animation];
-    animation.backgroundColor = [UIColor clearColor];
-    animation.hidden = YES;
-    self.animation = animation;
-    self.animation.userInteractionEnabled = NO;
-    
     self.leftView.backgroundColor = TPRandomColor;
+    
+    [CATransaction begin];
     
     UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:self.leftView.bounds byRoundingCorners:UIRectCornerBottomLeft | UIRectCornerTopLeft cornerRadii:CGSizeMake(5, 5)];
     CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
@@ -54,17 +48,33 @@
     maskLayer.path = maskPath.CGPath;
     self.leftView.layer.mask = maskLayer;
     self.leftView.layer.masksToBounds = YES;
+    
+    [CATransaction commit];
 }
 
 - (void)layoutSubviews{
     [super layoutSubviews];
     self.animation.frame = self.likeButton.frame;
-    self.animation.size = CGSizeMake(self.animation.width + 40, self.animation.height + 40);
+    self.animation.size = CGSizeMake(self.animation.width + 36, self.animation.height + 36);
     self.animation.center = self.likeButton.center;
 }
 
 - (void)configWith:(TPProjectListItem *)item{
+    self.item = item;
     self.nameLabel.text = item.text;
+    if (!self.animation) {
+        LOTAnimationView *animation = [LOTAnimationView animationNamed:@"like" inBundle:[NSBundle mainBundle]];
+        animation.frame = self.likeButton.frame;
+        animation.contentMode = UIViewContentModeScaleAspectFill;
+        [self.bgView addSubview:animation];
+        animation.backgroundColor = [UIColor clearColor];
+        animation.hidden = YES;
+        self.animation = animation;
+        self.animation.userInteractionEnabled = NO;
+    }
+    if (item.isFavorite) {
+        self.animation.hidden = NO;
+    }
 }
 
 - (IBAction)touchLikeButton:(UIButton *)sender {
@@ -76,11 +86,16 @@
     }else{
         self.animation.hidden = YES;
     }
+    self.item.isFavorite = !self.animation.hidden;
+    if (self.block) {
+        self.block(self.item, !self.animation.hidden);
+    }
 }
 
 - (void)prepareForReuse{
     [super prepareForReuse];
     self.nameLabel.text = @"";
+    self.animation.hidden = YES;
 }
 
 @end

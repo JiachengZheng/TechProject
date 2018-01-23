@@ -45,7 +45,7 @@
     layout.itemSize = CGSizeMake(TPScreenWidth/3, TPScreenWidth/3 - 20);
     self.collectionView.collectionViewLayout = layout;
     self.collectionView.alwaysBounceVertical = YES;
-    self.collectionView.frame = CGRectMake(0, TPStatusBarAndNavigationBarHeight, TPScreenWidth, TPScreenHeight - TPStatusBarAndNavigationBarHeight - TPTabbarSafeBottomMargin);
+    self.collectionView.frame = CGRectMake(0, TPStatusBarAndNavigationBarHeight, TPScreenWidth, TPScreenHeight - TPStatusBarAndNavigationBarHeight - TPTabbarSafeBottomMargin - TPTabbarHeight);
     [self loadData];
     // Do any additional setup after loading the view.
 }

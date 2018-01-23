@@ -11,10 +11,15 @@
 #import "TPProjectModel.h"
 #import "TPCommonDefine.h"
 #import "TPUtil.h"
+#import "TPProjectRegionModel.h"
 #import "TPProjectDataManager.h"
+#import "TPClientModel.h"
 NSString *const kTPDidReadExcelContentNotification = @"TPDidReadExcelContentNotification";
 NSString *const kTPProjectAddFileName = @"add_project";
+NSString *const kTPClientAddFileName = @"add_client";
 NSString *const kTPInitialProjectFileName = @"initial_data_project.xls";
+NSString *const kTPInitialClientFileName = @"initial_data_client.xls";
+
 @interface TPExcelManager ()
 
 @end
@@ -40,6 +45,9 @@ NSString *const kTPInitialProjectFileName = @"initial_data_project.xls";
     if ([name hasPrefix:kTPInitialProjectFileName] || [name hasPrefix:kTPProjectAddFileName]) {
         return [self readProjectsContent:reader];
     }
+    if ([name hasPrefix:kTPInitialClientFileName] || [name hasPrefix:kTPClientAddFileName]) {
+        return [self readClientContent:reader];
+    }
     [TPUtil showAlert:@"暂时无法处理该文件"];
     return nil;
 }
@@ -49,6 +57,68 @@ NSString *const kTPInitialProjectFileName = @"initial_data_project.xls";
     [rArr addObjectsFromArray:[self readRegionInfo:reader]];
     NSArray *projectArr = [self readProjectInfo:reader regionArr:rArr];
     return @{@"region": rArr, @"project": projectArr};
+}
+
+- (NSDictionary *)readClientContent:(DHxlsReader *)reader{
+    NSMutableArray *cArr = [NSMutableArray arrayWithArray:[TPProjectDataManager shareInstance].clientArr];
+    [cArr addObjectsFromArray:[self readClientInfo:reader]];
+    return @{@"client": cArr};
+}
+
+- (NSArray *)readClientTypeInfo:(DHxlsReader *)reader{
+    //读取客户子标题
+    NSMutableArray *typeArr = [NSMutableArray array];
+    NSInteger col = 2;
+    while (YES) {
+        DHcell *cell = [reader cellInWorkSheetIndex:0 row:2 col:col];
+        if(cell.type == cellBlank) break;
+        NSString *value = [cell.str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        [typeArr addObject:value];
+        col++;
+    }
+    return typeArr;
+}
+
+- (NSArray *)readClientInfo:(DHxlsReader *)reader{
+    NSArray *typeArr = [self readClientTypeInfo:reader];
+    NSMutableArray *clientArr = [NSMutableArray array];
+    NSInteger row = 3;
+    while (YES) {
+        DHcell *cell = [reader cellInWorkSheetIndex:0 row:row col:2];
+        if (cell.str) {
+            TPClientModel *model = [self readSingleClient:reader row:row typeArr:typeArr];
+            [clientArr addObject:model];
+        }else{
+            break;
+        }
+        row++;
+    }
+    return clientArr;
+}
+
+- (TPClientModel *)readSingleClient:(DHxlsReader *)reader row:(NSInteger)row typeArr:(NSArray *)typeArr{
+    TPClientModel *client = [TPClientModel new];
+    NSMutableArray *arr = [NSMutableArray array];
+    for (NSInteger i = 0;i < typeArr.count ; i++) {
+        DHcell *cell = [reader cellInWorkSheetIndex:0 row:row col:2+i];
+        NSString *value = [cell.str?:@"" stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        if (i == 0) {
+            client.projectName = value;
+        }else if(i == 1){
+            client.clientName = value;
+        }else if(i == 2){
+            client.projectNumber = value;
+        }else if(i == 3){
+            client.region = value;
+        }else{
+            NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+            [dic setValue:value forKey:typeArr[i]];
+            [arr addObject:dic];
+        }
+    }
+    client.clientId = [TPUtil generateUUID];
+    client.infoArr = [arr copy];
+    return client;
 }
 
 - (NSArray *)readTypeInfo:(DHxlsReader *)reader{

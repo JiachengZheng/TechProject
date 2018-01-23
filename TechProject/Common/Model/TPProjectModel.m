@@ -19,14 +19,3 @@ ENCODED_AND_DECODED()
     return self;
 }
 @end
-@implementation TPProjectRegionModel
-ENCODED_AND_DECODED()
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
-}
-@end

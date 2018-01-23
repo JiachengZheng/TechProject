@@ -99,6 +99,8 @@
         NSString *name = [surl lastPathComponent];
         if ([name hasPrefix:kTPProjectAddFileName]) {
             [[TPProjectDataManager shareInstance]addProjectFromExcel:surl];
+        }else if ([name hasPrefix:kTPClientAddFileName]) {
+            [[TPProjectDataManager shareInstance]addClientFromExcel:surl];
         }else{
             [TPUtil showAlert:@"文件名称不符合规范"];
         }

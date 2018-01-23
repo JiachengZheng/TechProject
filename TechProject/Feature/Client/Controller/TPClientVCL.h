@@ -7,7 +7,7 @@
 //
 
 #import "TPBaseViewController.h"
-
+#import "TPBarItem.h"
 @interface TPClientVCL : TPBaseViewController
-
+- (void)reloadData:(TPBarItem *)item;
 @end

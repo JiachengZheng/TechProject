@@ -17,6 +17,7 @@
 #import "TPProjectListVCL.h"
 #import "TPSeachProjectVCL.h"
 #import "TPSnowView.h"
+#import "TPFavoriteVCL.h"
 NSInteger kItemsCount = 3;
 
 @interface TPHomeVCL ()<UICollectionViewDelegate, UICollectionViewDataSource>
@@ -103,7 +104,9 @@ NSInteger kItemsCount = 3;
 }
 
 - (void)openFavoriteVCL{
-    
+    UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    TPFavoriteVCL *vcl = (TPFavoriteVCL *)[main instantiateViewControllerWithIdentifier:@"TPFavoriteVCL"];
+    [self.navigationController pushViewController:vcl animated:YES];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -123,6 +126,10 @@ NSInteger kItemsCount = 3;
     TPProjectListVCL *listVCL = (TPProjectListVCL *)[main instantiateViewControllerWithIdentifier:@"TPProjectListVCL"];
     listVCL.region = item.region;
     [self.navigationController pushViewController:listVCL animated:YES];
+    self.collecitonView.userInteractionEnabled = NO;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.collecitonView.userInteractionEnabled = YES;
+    });
 }
 
 - (void)dealloc{

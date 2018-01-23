@@ -7,11 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@interface TPProjectRegionModel : NSObject
-@property (nonatomic, copy) NSString *regionId;
-@property (nonatomic, copy) NSString *name;
-@end
-
+#import "TPProjectRegionModel.h"
 @interface TPProjectModel : NSObject
 @property (nonatomic, strong) NSMutableArray *infoArr;
 @property (nonatomic, copy) NSString *name;
